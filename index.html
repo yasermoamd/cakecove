@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./public/css/style.css" />
     <link rel="stylesheet" href="./public/css/product.css" />
     <link rel="stylesheet" href="./public/css/footer.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-ktQAw6ch1xgkqSYI2tj3P5kMIp90EDVft2Qz31O//5LOUzQ8jc6UqKMJhzj4VvH6F6QQBDS1M9tK4j0e+ia+ig==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,6 +25,10 @@
     <!-- navbar for the webpage -->
     <header>
       <h1>CakeCove</h1>
+      <button class="hamburger-icon" onclick="toggleNav()">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
       <nav>
         <ul>
           <li><a href="">Home</a></li>
@@ -267,5 +272,13 @@
     <!---End Footer--->
     <!-- Carousel script link -->
     <!-- <script src="./public/js/carousel.js"></script> -->
+
+    <script>
+      function toggleNav() {
+        const nav = document.querySelector('header nav ul');
+        nav.classList.toggle('active');
+      }
+  
+    </script>
   </body>
 </html>
