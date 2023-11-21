@@ -1,78 +1,18 @@
+ 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./public/css/style.css" />
     <link rel="stylesheet" href="./public/css/product.css" />
     <link rel="stylesheet" href="./public/css/footer.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-ktQAw6ch1xgkqSYI2tj3P5kMIp90EDVft2Qz31O//5LOUzQ8jc6UqKMJhzj4VvH6F6QQBDS1M9tK4j0e+ia+ig==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Comic+Neue&family=Lato&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
-      rel="stylesheet"
-    /> -->
     <title>Cake Cove</title>
   </head>
   <body>
-    <!-- navbar for the webpage -->
-    <header>
-      <h1>CakeCove</h1>
-      <button class="hamburger-icon" onclick="toggleNav()">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-
-      <nav>
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">CupCake</a></li>
-          <li><a href="">Wedding</a></li>
-          <li><a href="">Treats</a></li>
-          <li><a href="">Accessories</a></li>
-        </ul>
-      </nav>
-      <div class="header-right-side">
-        <span>
-          <input type="search" name="" id="" placeholder="Search..." />
-
-          <button>
-            <img src="/public/icons/icons8-search-30.png" alt="" />
-          </button>
-        </span>
-
-        <span>
-          <a href="">
-            <img
-              src="./public/icons/icons8-person-64.png"
-              id="person_img"
-              alt=""
-            />
-          </a>
-
-          <a href="cart.html">
-            <img src="/public/icons/icons8-bag-50.png" id="bag_img" alt="" />
-          </a>
-        </span>
-      </div>
-    </header>
-
-    <!-- Carousel-->
-    <!-- 
-    <section id="carousel">
-      <button id="carousel_button"></button>
-      <div></div>
-      <button id="carousel_button"></button>
-    </section>
-    -->
-
-    <!---Banner -->
+    <?php
+        include('./views/navbar.php');
+    ?>
 
     <main>
       <section class="product_list">

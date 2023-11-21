@@ -1,14 +1,17 @@
 <?php
 class Database {
-    private $host = "";
-    private $username = "";
-    private $password = "";
-    private $dbname = "";
+    private $host = "localhost";
+    private $username = "root";
+    private $password = "PHPSDKll@123";
+    private $dbname = "cakecove";
     public $conn;
 
     public function __construct() {
         $this->conn = new mysqli($this->host, $this->username, $this->password, $this->dbname);
-        if ($this->conn->connect_error) {
+        if ($this->conn) {
+            printf("Connected");
+        }
+        else if ($this->conn->connect_error) {
             die("Connection failed: " . $this->conn->connect_error);
         }
     }

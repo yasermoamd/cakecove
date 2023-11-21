@@ -1,4 +1,5 @@
 <?php
+
 class Product {
     private $conn;
 
@@ -14,6 +15,10 @@ class Product {
         return $stmt->execute();
     }
 
+    /**
+     * readProduct - function that fetch all product from database.
+     * Return: function return list of products.
+     */
     public function readProducts() {
         $sql = "SELECT * FROM products";
         $result = $this->conn->query($sql);
@@ -23,6 +28,18 @@ class Product {
             $products[] = $row;
         }
 
+        return $products;
+    }
+
+    public function getProductById($id) {
+        $sql = "SELECT * FROM products WHERE id = '$id'";
+        $result  = $this->conn->query($sql);
+
+        $products = [];
+
+        while ($row = $result->fetch_assoc()) {
+            $products[] = $row;
+        }
         return $products;
     }
 
