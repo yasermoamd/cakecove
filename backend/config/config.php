@@ -2,8 +2,8 @@
 class Database {
     private $host = "localhost";
     private $username = "root";
-    private $password = "PHPSDKll@123";
-    private $dbname = "cakecove";
+    private $password = "123";
+    private $dbname = "bakery";
     public $conn;
 
     public function __construct() {
@@ -16,6 +16,4 @@ class Database {
         }
     }
 }
-
-
 ?>

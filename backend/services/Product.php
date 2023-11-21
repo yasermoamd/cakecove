@@ -1,4 +1,6 @@
 <?php
+require '../utilities/func.php';
+require '../services/Category.php';
 
 class Product {
     private $conn;
@@ -31,6 +33,12 @@ class Product {
         return $products;
     }
 
+    /**
+     * getProductById - get product by ID
+     * @param: $id 
+     * Return: a product.
+     */
+
     public function getProductById($id) {
         $sql = "SELECT * FROM products WHERE id = '$id'";
         $result  = $this->conn->query($sql);
@@ -43,8 +51,25 @@ class Product {
         return $products;
     }
 
+    /**
+     * getProductByCategoryId - fucntion that return product based on category.
+     * @param: $id of category.
+     * Return: array of products.
+     */
+     public function getProductByCategoryId($id) {
+        $sql = "SELECT * FROM products WHERE categoryID = '$id'";
+        $result  = $this->conn->query($sql);
+
+        $products = [];
+
+        while ($row = $result->fetch_assoc()) {
+            $products[] = $row;
+        }
+        return $products;
+     }
+
     public function updateProduct($productId, $name, $description, $price) {
-        $sql = "UPDATE products SET name=?, description=?, price=? WHERE productID=?";
+        $sql = "UPDATE products SET name=?, description=?, price=? WHERE id=?";
         $stmt = $this->conn->prepare($sql);
         $stmt->bind_param("ssdi", $name, $description, $price, $productId);
 

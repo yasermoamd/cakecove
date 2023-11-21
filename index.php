@@ -12,164 +12,26 @@
   <body>
     <?php
         include('./views/navbar.php');
+                // Get the current URL
+                $currentUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+                // Parse the URL
+                $urlParts = parse_url($currentUrl);
+                
+                // Get the path from the URL
+                $path = $urlParts['path'];
+                
+                // Explode the path by '/' to get an array of parts
+                $pathParts = explode('/', $path);
+                
+                // Get the last part of the path (in this case, "CupCake")
+                $categoryFromUrl = end($pathParts);
+                
+                // Output the result
+                printf("Category from URL: %s", htmlspecialchars($categoryFromUrl));
     ?>
 
-    <main>
-      <section class="product_list">
-        <p class="section_type">
-          <span>Cake</span>
-          <span>View all</span>
-        </p>
-        <div class="products">
-          <div class="product_item">
-            <img
-              src="https://www.bettys.co.uk/media/catalog/product/cache/10dc640ca36e6dd229fad72d698c1f34/c/o/coffee-walnut-loaf-cake-2005064.jpg"
-              alt=""
-            />
-            <article>
-              <h3 class="product_title">Coffee & Walnut Loaf Cake</h3>
-              <span class="product_description"
-                >Our deliciously moreish version of a teatime classic</span
-              >
-              <span class="product_price">£ 7.50</span>
-            </article>
-            <div class="btns">
-              <input value="View" type="button" class="view_btn" />
-              <input type="button" class="basket_btn" value="Add To Basket" />
-            </div>
-          </div>
-          <div class="product_item">
-            <img
-              src="https://www.bettys.co.uk/media/catalog/product/cache/10dc640ca36e6dd229fad72d698c1f34/c/o/coffee-walnut-loaf-cake-2005064.jpg"
-              alt=""
-            />
-            <article>
-              <h3 class="product_title">Coffee & Walnut Loaf Cake</h3>
-              <span class="product_description"
-                >Our deliciously moreish version of a teatime classic</span
-              >
-              <span class="product_price">£ 7.50</span>
-            </article>
-            <div class="btns">
-              <input value="View" type="button" class="view_btn" />
-              <input type="button" class="basket_btn" value="Add To Basket" />
-            </div>
-          </div>
-          <div class="product_item">
-            <img
-              src="https://www.bettys.co.uk/media/catalog/product/cache/10dc640ca36e6dd229fad72d698c1f34/c/o/coffee-walnut-loaf-cake-2005064.jpg"
-              alt=""
-            />
-            <article>
-              <h3 class="product_title">Coffee & Walnut Loaf Cake</h3>
-              <span class="product_description"
-                >Our deliciously moreish version of a teatime classic</span
-              >
-              <span class="product_price">£ 7.50</span>
-            </article>
-            <div class="btns">
-              <input value="View" type="button" class="view_btn" />
-              <input type="button" class="basket_btn" value="Add To Basket" />
-            </div>
-          </div>
-          <div class="product_item">
-            <img
-              src="https://www.bettys.co.uk/media/catalog/product/cache/10dc640ca36e6dd229fad72d698c1f34/c/o/coffee-walnut-loaf-cake-2005064.jpg"
-              alt=""
-            />
-            <article>
-              <h3 class="product_title">Coffee & Walnut Loaf Cake</h3>
-              <span class="product_description"
-                >Our deliciously moreish version of a teatime classic</span
-              >
-              <span class="product_price">£ 7.50</span>
-            </article>
-            <div class="btns">
-              <input value="View" type="button" class="view_btn" />
-              <input type="button" class="basket_btn" value="Add To Basket" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="product_list">
-        <div class="section_type">
-          <span>CupCake</span>
-          <span>View All</span>
-        </div>
-        <div class="products">
-          <div class="product_item">
-            <img
-              src="https://www.bettys.co.uk/media/catalog/product/cache/10dc640ca36e6dd229fad72d698c1f34/c/o/coffee-walnut-loaf-cake-2005064.jpg"
-              alt=""
-            />
-            <article>
-              <h3 class="product_title">Coffee & Walnut Loaf Cake</h3>
-              <span class="product_description"
-                >Our deliciously moreish version of a teatime classic</span
-              >
-              <span class="product_price">£ 7.50</span>
-            </article>
-            <div class="btns">
-              <input value="View" type="button" class="view_btn" />
-              <input type="button" class="basket_btn" value="Add To Basket" />
-            </div>
-          </div>
-          <div class="product_item">
-            <img
-              src="https://www.bettys.co.uk/media/catalog/product/cache/10dc640ca36e6dd229fad72d698c1f34/c/o/coffee-walnut-loaf-cake-2005064.jpg"
-              alt=""
-            />
-            <article>
-              <h3 class="product_title">Coffee & Walnut Loaf Cake</h3>
-              <span class="product_description"
-                >Our deliciously moreish version of a teatime classic</span
-              >
-              <span class="product_price">£ 7.50</span>
-            </article>
-            <div class="btns">
-              <input value="View" type="button" class="view_btn" />
-              <input type="button" class="basket_btn" value="Add To Basket" />
-            </div>
-          </div>
-          <div class="product_item">
-            <img
-              src="https://www.bettys.co.uk/media/catalog/product/cache/10dc640ca36e6dd229fad72d698c1f34/c/o/coffee-walnut-loaf-cake-2005064.jpg"
-              alt=""
-            />
-            <article>
-              <h3 class="product_title">Coffee & Walnut Loaf Cake</h3>
-              <span class="product_description"
-                >Our deliciously moreish version of a teatime classic</span
-              >
-              <span class="product_price">£ 7.50</span>
-            </article>
-            <div class="btns">
-              <input value="View" type="button" class="view_btn" />
-              <input type="button" class="basket_btn" value="Add To Basket" />
-            </div>
-          </div>
-          <div class="product_item">
-            <img
-              src="https://www.bettys.co.uk/media/catalog/product/cache/10dc640ca36e6dd229fad72d698c1f34/c/o/coffee-walnut-loaf-cake-2005064.jpg"
-              alt=""
-            />
-            <article>
-              <h3 class="product_title">Coffee & Walnut Loaf Cake</h3>
-              <span class="product_description"
-                >Our deliciously moreish version of a teatime classic</span
-              >
-              <span class="product_price">£ 7.50</span>
-            </article>
-            <div class="btns">
-              <input value="View" type="button" class="view_btn" />
-              <input type="button" class="basket_btn" value="Add To Basket" />
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
+    
     <!--- Start Footer --->
 
     <footer>
@@ -222,3 +84,7 @@
     </script>
   </body>
 </html>
+
+
+
+ 

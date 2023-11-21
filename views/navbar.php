@@ -1,25 +1,25 @@
 <?php
 require __DIR__ . '/../backend/services/CategoryType.php';
 
- $cateoryType = new CategoryType;
+ $categoryType = new CategoryType;
 ?>
 <head>
     <link rel="stylesheet" href="../public/css/style.css">
 </head>
 <header>
-      <h1>CakeCove</h1>
+      <h1><a href="/">CakeCove</a></h1>
       <button class="hamburger-icon" onclick="toggleNav()">
         <i class="fa-solid fa-bars"></i>
       </button>
 
       <nav>
         <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="category_products.php?category=<?php echo $cateoryType::CAKE; ?>">Cake</a></li>
-          <li><a href="category_products.php?category=<?php echo $cateoryType::CUPCAKE; ?>">CupCake</a></li>
-          <li><a href="category_products.php?category=<?php echo $cateoryType::WEDDING; ?>">Wedding</a></li>
-          <li><a href="category_products.php?category=<?php echo $cateoryType::TREATS; ?>">Treats</a></li>
-          <li><a href="category_products.php?category=<?php echo $cateoryType::ACCESSORIES; ?>">Accessories</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="<?php echo $categoryType::CAKE; ?>">Cake</a></li>
+          <li><a href="<?php echo $categoryType::CUPCAKE; ?>">CupCake</a></li>
+          <li><a href="<?php echo $categoryType::WEDDING; ?>">Wedding</a></li>
+          <li><a href="<?php echo $categoryType::TREATS; ?>">Treats</a></li>
+          <li><a href="<?php echo $categoryType::ACCESSORIES; ?>">Accessories</a></li>
         </ul>
       </nav>
       <div class="header-right-side">
