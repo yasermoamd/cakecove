@@ -15,7 +15,7 @@ CREATE TABLE `categories` (
   `name` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-INSERT INTO `categories` (`name`) VALUES ('Cake'),('CupCake'),('Wedding'),('Treats'),('Accessories');
+INSERT INTO `categories` (`id`, `name`) VALUES (1, 'Cake'),(2, 'CupCake'),(3, 'Wedding'),(4, 'Treats'),(5, 'Accessories');
 
 INSERT INTO `products` (`id`, `name`, `price`, `description`, `image`, `categoryID`) VALUES
 (1, 'Snowballs Caramel(pack of 4)', 6.95, 'Delicious buns, coated Caramel in icing and coconut Caramel and filled with raspberry jam', 'https://frenchvillage.com/cdn/shop/files/snowballimage_720x.jpg', 1),

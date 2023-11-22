@@ -2,7 +2,7 @@
 class Database {
     private $host = "localhost";
     private $username = "root";
-    private $password = "PHPSDKll@123";
+    private $password = "123";
     private $dbname = "cakecove";
     public $conn;
 

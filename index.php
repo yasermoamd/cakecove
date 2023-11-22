@@ -10,9 +10,7 @@
     <title>Cake Cove</title>
   </head>
   <body>
-    <?php
-      include('./backend/services/category_products.php');
-    /*
+    <?php    
         include('./views/navbar.php'); 
         require_once('./backend/config/config.php');
         require_once('./backend/utilities/func.php');
@@ -39,7 +37,6 @@
         foreach ($product_list as $item) {
             echo $item['name'] . ' - ' . $item['description'] . '<br>';
         }
- */
     ?>
 
     
