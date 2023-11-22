@@ -1,7 +1,5 @@
 <?php
-require '../utilities/func.php';
-require '../services/Category.php';
-
+ 
 class Product {
     private $conn;
 

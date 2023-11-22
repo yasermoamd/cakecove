@@ -11,24 +11,35 @@
   </head>
   <body>
     <?php
-        include('./views/navbar.php');
-                // Get the current URL
-                $currentUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+      include('./backend/services/category_products.php');
+    /*
+        include('./views/navbar.php'); 
+        require_once('./backend/config/config.php');
+        require_once('./backend/utilities/func.php');
+        require_once('./backend/services/Category.php');
+        require_once('./backend/services/Product.php');
 
-                // Parse the URL
-                $urlParts = parse_url($currentUrl);
-                
-                // Get the path from the URL
-                $path = $urlParts['path'];
-                
-                // Explode the path by '/' to get an array of parts
-                $pathParts = explode('/', $path);
-                
-                // Get the last part of the path (in this case, "CupCake")
-                $categoryFromUrl = end($pathParts);
-                
-                // Output the result
-                printf("Category from URL: %s", htmlspecialchars($categoryFromUrl));
+        // database connection instance
+        $database = new Database();
+        $conn = $database->conn;
+
+        $utilitie = new UtilitiesFunction();
+        $category_name = $utilitie->getCategoryFromUrl();
+        
+
+        // category instance
+        $category = new Category($conn);
+        $category_id = $category->getCatIdByName($category_name);
+
+        // product instance
+        $product = new Product($conn);
+        $product_list = $product->getProductByCategoryId($category_id);
+       
+        
+        foreach ($product_list as $item) {
+            echo $item['name'] . ' - ' . $item['description'] . '<br>';
+        }
+ */
     ?>
 
     
