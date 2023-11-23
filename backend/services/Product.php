@@ -55,16 +55,25 @@ class Product {
      * Return: array of products.
      */
      public function getProductByCategoryId($id) {
-        $sql = "SELECT * FROM products WHERE categoryID = '$id'";
-        $result  = $this->conn->query($sql);
+        try {
+            $sql = "SELECT * FROM products WHERE categoryID = '$id'";
+            $result  = $this->conn->query($sql);
 
-        $products = [];
+            $products = [];
 
-        while ($row = $result->fetch_assoc()) {
-            $products[] = $row;
+            while ($row = $result->fetch_assoc()) {
+                $products[] = $row;
+            }
+
+            if (count($products) > 0) {
+                return $products;
+            } else {
+                return "No products found in this category.";
+            }
+        } catch (Exception $e) {
+            return "Error: " . $e->getMessage();
         }
-        return $products;
-     }
+        }
 
     public function updateProduct($productId, $name, $description, $price) {
         $sql = "UPDATE products SET name=?, description=?, price=? WHERE id=?";

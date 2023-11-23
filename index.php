@@ -10,86 +10,56 @@
     <title>Cake Cove</title>
   </head>
   <body>
-    <?php    
-        include('./views/navbar.php'); 
+  <?php
+class App {
+
+    private $database;
+    private $utilitie;
+    private $category;
+    private $product;
+
+    public function __construct() {
+        // Include necessary files
+        include('./views/navbar.php');
         require_once('./backend/config/config.php');
         require_once('./backend/utilities/func.php');
         require_once('./backend/services/Category.php');
         require_once('./backend/services/Product.php');
 
-        // database connection instance
-        $database = new Database();
-        $conn = $database->conn;
+        // Create database connection instance
+        $this->database = new Database();
+        $this->conn = $this->database->conn;
 
-        $utilitie = new UtilitiesFunction();
-        $category_name = $utilitie->getCategoryFromUrl();
-        
+        // Create utility object
+        $this->utilitie = new UtilitiesFunction();
 
-        // category instance
-        $category = new Category($conn);
-        $category_id = $category->getCatIdByName($category_name);
+        // Create category and product objects
+        $this->category = new Category($this->conn);
+        $this->product = new Product($this->conn);
+    }
 
-        // product instance
-        $product = new Product($conn);
-        $product_list = $product->getProductByCategoryId($category_id);
-       
-        
+    public function run() {
+        // Get category name from URL
+        $category_name = $this->utilitie->getCategoryFromUrl();
+
+        // Get category ID from category name
+        $category_id = $this->category->getCatIdByName($category_name);
+
+        // Get product list by category ID
+        $product_list = $this->product->getProductByCategoryId($category_id);
+
+        // Display product list
         foreach ($product_list as $item) {
-            echo $item['name'] . ' - ' . $item['description'] . '<br>';
+          echo $item['name'] . ' - ' . $item['description'] . '<br>';
         }
+        // Include footer
+        include('./views/footer.php');
+    }
+}
+      // Create and run the application
+      $app = new App();
+      $app->run();
     ?>
-
-    
-    <!--- Start Footer --->
-
-    <footer>
-      <div class="top-footer">
-        <div class="left-footer">
-          <p>Menu</p>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">CupCake</a></li>
-            <li><a href="#">Wedding</a></li>
-            <li><a href="#">Treats</a></li>
-            <li><a href="#">Accessories</a></li>
-          </ul>
-        </div>
-
-        <div class="center-footer">
-          <p>Customer Service</p>
-
-          <ul>
-            <li><a href="#">Our Stores</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Policy Privacy</a></li>
-          </ul>
-        </div>
-
-        <div class="right-footer">
-          <p>Social Media</p>
-          <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Youtube</a></li>
-          </ul>
-        </div>
-      </div>
-      <p>Created by Cake Cove. © 2023</p>
-    </footer>
-
-    <!---End Footer--->
-    <!-- Carousel script link -->
-    <!-- <script src="./public/js/carousel.js"></script> -->
-
-    <script>
-      function toggleNav() {
-        const nav = document.querySelector('header nav ul');
-        nav.classList.toggle('active');
-      }
-  
-    </script>
   </body>
 </html>
 

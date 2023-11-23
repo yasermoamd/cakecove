@@ -5,7 +5,8 @@ require __DIR__ . '/../backend/services/CategoryType.php';
 ?>
 <head>
     <link rel="stylesheet" href="../public/css/style.css">
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-ktQAw6ch1xgkqSYI2tj3P5kMIp90EDVft2Qz31O//5LOUzQ8jc6UqKMJhzj4VvH6F6QQBDS1M9tK4j0e+ia+ig==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
 <header>
       <h1><a href="/">CakeCove</a></h1>
       <button class="hamburger-icon" onclick="toggleNav()">
@@ -46,3 +47,11 @@ require __DIR__ . '/../backend/services/CategoryType.php';
         </span>
       </div>
     </header>
+
+    <script>
+      function toggleNav() {
+        const nav = document.querySelector('header nav ul');
+        nav.classList.toggle('active');
+      }
+  
+    </script>
