@@ -1,8 +1,8 @@
 <?php
 class Database {
     private $host = "localhost";
-    private $username = "root";
-    private $password = "PHPSDKll@123";
+    private $username = "admin";
+    private $password = "admin";
     private $dbname = "cakecove";
     public $conn;
 

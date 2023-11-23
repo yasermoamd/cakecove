@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/css/footer.css" />
-</head>
-<body>
-        <!--- Start Footer --->
-
-        <footer>
+<footer>
       <div class="top-footer">
         <div class="left-footer">
           <p>Menu</p>
@@ -44,5 +34,3 @@
       </div>
       <p>Created by Cake Cove. © 2023</p>
     </footer>
-</body>
-</html>

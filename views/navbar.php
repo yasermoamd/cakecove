@@ -3,7 +3,7 @@ require __DIR__ . '/../backend/services/CategoryType.php';
 
  $categoryType = new CategoryType;
 ?>
-<head>
+  <head>
     <link rel="stylesheet" href="../public/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-ktQAw6ch1xgkqSYI2tj3P5kMIp90EDVft2Qz31O//5LOUzQ8jc6UqKMJhzj4VvH6F6QQBDS1M9tK4j0e+ia+ig==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
@@ -41,7 +41,7 @@ require __DIR__ . '/../backend/services/CategoryType.php';
             />
           </a>
 
-          <a href="cart.html">
+          <a href="cart.php">
             <img src="/public/icons/icons8-bag-50.png" id="bag_img" alt="" />
           </a>
         </span>

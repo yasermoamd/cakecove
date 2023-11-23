@@ -25,6 +25,7 @@ class App {
         require_once('./backend/utilities/func.php');
         require_once('./backend/services/Category.php');
         require_once('./backend/services/Product.php');
+        require './cart.php';
 
         // Create database connection instance
         $this->database = new Database();
@@ -49,9 +50,8 @@ class App {
         $product_list = $this->product->getProductByCategoryId($category_id);
 
         // Display product list
-        foreach ($product_list as $item) {
-          echo $item['name'] . ' - ' . $item['description'] . '<br>';
-        }
+         $this->product->displayProduct($product_list);
+        
         // Include footer
         include('./views/footer.php');
     }
@@ -59,7 +59,7 @@ class App {
       // Create and run the application
       $app = new App();
       $app->run();
-    ?>
+    ?> 
   </body>
 </html>
 
