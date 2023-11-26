@@ -17,6 +17,7 @@ class App {
     private $utilitie;
     private $category;
     private $product;
+    private $conn;
 
     public function __construct() {
         // Include necessary files
