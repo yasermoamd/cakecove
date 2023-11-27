@@ -78,27 +78,32 @@ class Product {
 
 
 
-    public function displayProduct($product_list) {
-        foreach ($product_list as $item) {
-            echo '
-            <div class="section_type">
-            <div class="product_item" key="' . $item['id'] . '">
-                <img src="' . $item['image'] . '" alt="">
-                <article> 
-                    <h3 class="product_title">' . $item['name'] . '</h3>
-                    <span class="description">' . $item['description'] . '</span>
-                    <span class="product_price">£ ' . $item['price'] . '</span>
-                </article>
-                <div class="btns">
-                <a class="view_product" href="views/view_product.php?id=' . $item['id'] . '"> 
-                    <input value="View" type="button" class="view_btn"  /></a>
-                    <button type="submit" class="basket_btn" onclick="addToCart()>">Add To Basket</button>
+        public function displayProduct($product_list) {
+            foreach ($product_list as $item) {
+                echo '
+                <div class="section_type">
+                <div class="product_item" key="' . $item['id'] . '">
+                    <img src="' . $item['image'] . '" alt="">
+                    <article> 
+                        <h3 class="product_title">' . $item['name'] . '</h3>
+                        <span class="description">' . $item['description'] . '</span>
+                        <span class="product_price">£ ' . $item['price'] . '</span>
+                    </article>
+                    <div class="btns">
+                        <form method="post" action="../../cart.php">
+                            <input type="hidden" name="id" value="' . $item['id'] . '">
+                            <input type="hidden" name="name" value="' . $item['name'] . '">
+                            <input type="hidden" name="description" value="' . $item['description'] . '">
+                            <input type="hidden" name="price" value="' . $item['price'] . '">
+                            <input type="hidden" name="image" value="' . $item['image'] . '">
+                            <input value="View" type="submit" class="view_btn" />
+                            <button type="submit" class="basket_btn" name="addbutton">Add To Basket</button>
+                        </form>
+                    </div>
                 </div>
-            </div>
-        </div>';
+            </div>';
+            }
         }
-        }
-        
 
     public function updateProduct($productId, $name, $description, $price) {
         $sql = "UPDATE products SET name=?, description=?, price=? WHERE id=?";

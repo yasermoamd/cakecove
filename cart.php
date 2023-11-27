@@ -10,36 +10,19 @@
     <title>Shopping cart - Cake Cove</title>
   </head>
   <body>
-   <?php
-     session_start();
+  <?php
+    require_once('./backend/services/manage_cart.php');
 
-     function addToCart($id, $name, $description, $price, $image) {
-       if (!isset($_SESSION['cart'])) {
-         $_SESSION['cart'] = [];
-        };
-        if (isset($_SESSION['cart'][$id])) {
-          $_SESSION['cart'][$id]['quantity']++;
-        } else {
-          $_SESSION['cart'][$id] = [
-            'id' => $id,
-            'name' => $name,
-            'description' => $description,
-            'price' => $price,
-            'image' => $image,
-            'quantity' => 1
-          ];
-        }
+    if (isset($_POST['addbutton'])) {
+        $id = $_POST['id'];
+        $name = $_POST['name'];
+        $description = $_POST['description'];
+        $price = $_POST['price'];
+        $image = $_POST['image'];
+    
+        addToCart($id, $name, $description, $price, $image);
+    
       }
-
-    if (isset($_SESSION['cart'])) {
-      foreach ($_SESSION['cart'] as $id => $item) {
-        echo $item['name'] . ' - ' . $item['description'] . '<br>';
-      }
-    } else {
-        echo 'Your cart is empty';
-      }
-  
-
    ?>
   </body>
 </html>
