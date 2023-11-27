@@ -4,6 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="image/png" sizes="16x16" rel="icon" href="https://img.icons8.com/color/48/shop.png">
     <link rel="stylesheet" href="./public/css/product.css" />
     <link rel="stylesheet" href="./public/css/footer.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-ktQAw6ch1xgkqSYI2tj3P5kMIp90EDVft2Qz31O//5LOUzQ8jc6UqKMJhzj4VvH6F6QQBDS1M9tK4j0e+ia+ig==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -52,9 +53,19 @@ class App {
 
         // Display product list
         $this->product->displayProduct($product_list);
-           
+        
+        // display home page.
+        if (!$this->utilitie->getCategoryFromUrl()) {
+             $this->HomePage();
+        }
+
         // Include footer
         include('./views/footer.php');
+    }
+
+
+    public function HomePage() {
+      echo "<h1>Home Page </h1>";
     }
 }
       // Create and run the application

@@ -1,5 +1,6 @@
 <?php
  session_start();
+
 class Product {
     private $conn;
 
@@ -79,9 +80,10 @@ class Product {
 
 
         public function displayProduct($product_list) {
+            echo '<div class="section_type">';
             foreach ($product_list as $item) {
                 echo '
-                <div class="section_type">
+                 
                 <div class="product_item" key="' . $item['id'] . '">
                     <img src="' . $item['image'] . '" alt="">
                     <article> 
@@ -90,19 +92,19 @@ class Product {
                         <span class="product_price">£ ' . $item['price'] . '</span>
                     </article>
                     <div class="btns">
-                        <form method="post" action="../../cart.php">
+                        <form method="post">
                             <input type="hidden" name="id" value="' . $item['id'] . '">
                             <input type="hidden" name="name" value="' . $item['name'] . '">
                             <input type="hidden" name="description" value="' . $item['description'] . '">
                             <input type="hidden" name="price" value="' . $item['price'] . '">
                             <input type="hidden" name="image" value="' . $item['image'] . '">
                             <input value="View" type="submit" class="view_btn" />
-                            <button type="submit" class="basket_btn" name="addbutton">Add To Basket</button>
+                            <button type="submit" class="basket_btn" name="addbutton" id="add_to_cart">Add To Basket</button>
                         </form>
                     </div>
-                </div>
-            </div>';
+                </div>';
             }
+            echo ' </div>';
         }
 
     public function updateProduct($productId, $name, $description, $price) {
@@ -122,3 +124,8 @@ class Product {
     }
 }
 ?>
+
+ 
+<body>
+<script src="../../public/js/cart.js"></script>
+</body> 

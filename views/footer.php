@@ -1,3 +1,6 @@
+<head>
+<link rel="stylesheet" href="../public/css/footer.css">
+</head>
 <footer>
       <div class="top-footer">
         <div class="left-footer">

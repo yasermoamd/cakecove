@@ -18,6 +18,12 @@
         // Return the result
         return htmlspecialchars($categoryFromUrl);
      }
+     
+
+     public function displayHomePage() {
+        $currentUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+     }
+
  }
 
 ?>

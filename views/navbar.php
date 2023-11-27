@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/../backend/services/CategoryType.php';
+require __DIR__ . '/../backend/models/CategoryType.php';
 
  $categoryType = new CategoryType;
 ?>
@@ -33,15 +33,15 @@ require __DIR__ . '/../backend/services/CategoryType.php';
         </span>
 
         <span>
-          <a href="">
+          <a href="../views/account.php">
             <img
-              src="./public/icons/icons8-person-64.png"
+              src="./public/icons/person.png"
               id="person_img"
               alt=""
             />
           </a>
 
-          <a href="cart.php">
+          <a href="../cart.php">
             <img src="/public/icons/icons8-bag-50.png" id="bag_img" alt="" />
           </a>
         </span>
