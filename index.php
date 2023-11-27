@@ -25,8 +25,7 @@ class App {
         require_once('./backend/config/config.php');
         require_once('./backend/utilities/func.php');
         require_once('./backend/services/Category.php');
-        require_once('./backend/services/Product.php');
-        require './cart.php';
+        require_once('./backend/services/Product.php'); 
 
         // Create database connection instance
         $this->database = new Database();
@@ -41,6 +40,7 @@ class App {
     }
 
     public function run() {
+        $product_list = array();
         // Get category name from URL
         $category_name = $this->utilitie->getCategoryFromUrl();
 
@@ -51,8 +51,8 @@ class App {
         $product_list = $this->product->getProductByCategoryId($category_id);
 
         // Display product list
-         $this->product->displayProduct($product_list);
-        
+        $this->product->displayProduct($product_list);
+           
         // Include footer
         include('./views/footer.php');
     }
