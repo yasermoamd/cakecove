@@ -1,3 +1,6 @@
+/**
+  Product CSS
+**/
 main {
   display: flex;
   flex-direction: column;
@@ -6,8 +9,9 @@ main {
 .section_type {
   font-family: "Lato", Helvetica "Neue", Helvetica, Arial, sans-serif;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  align-items: center; 
 }
 .products {
   display: flex;
