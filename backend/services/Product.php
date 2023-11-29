@@ -1,5 +1,11 @@
 <?php
- session_start();
+/**
+ * Product - class that handle all product related queries.
+ * @param: $conn - connection to database.
+ * @functinos: createProduct, readProducts, 
+ *             getProductById, getProductByCategoryId, 
+ *             updateProduct, deleteProduct.
+ */
 class Product {
     private $conn;
 
@@ -8,18 +14,23 @@ class Product {
         $this->conn = $conn;
     }
 
-    public function createProduct($name, $description, $price) {
+    /**
+     * createProduct - function that create new product.
+     * @param: $name, $description, $price.
+     * Return: true if product is created, false otherwise.
+     */
+     public function createProduct($name, $description, $price) {
         $sql = "INSERT INTO products (name, description, price) VALUES (?, ?, ?)";
         $stmt = $this->conn->prepare($sql);
         $stmt->bind_param("ssd", $name, $description, $price);
 
         return $stmt->execute();
-    }
+     }
 
-    /**
-     * readProduct - function that fetch all product from database.
-     * Return: function return list of products.
-     */
+     /**
+      * readProducts - function that return all products.
+      * Return: array of products.
+      */
     public function readProducts() {
         $sql = "SELECT * FROM products";
         $result = $this->conn->query($sql);
@@ -33,11 +44,10 @@ class Product {
     }
 
     /**
-     * getProductById - get product by ID
-     * @param: $id 
-     * Return: a product.
+     * getProductById - function that return product based on id.
+     * @param: $id of product.
+     * Return: array of products.
      */
-
     public function getProductById($id) {
         $sql = "SELECT * FROM products WHERE id = '$id'";
         $result  = $this->conn->query($sql);
@@ -51,7 +61,7 @@ class Product {
     }
 
     /**
-     * getProductByCategoryId - fucntion that return product based on category.
+     * getProductByCategoryId - function that return product based on category id.
      * @param: $id of category.
      * Return: array of products.
      */
@@ -76,8 +86,11 @@ class Product {
         }
         }
 
-
-
+        /**
+         * displayProduct - function that display product.
+         * @param: $product_list - array of products.
+         * Return: html code of product.
+         */
         public function displayProduct($product_list) {
             foreach ($product_list as $item) {
                 echo '
@@ -105,20 +118,30 @@ class Product {
             }
         }
 
-    public function updateProduct($productId, $name, $description, $price) {
-        $sql = "UPDATE products SET name=?, description=?, price=? WHERE id=?";
-        $stmt = $this->conn->prepare($sql);
-        $stmt->bind_param("ssdi", $name, $description, $price, $productId);
+        /**
+         * updateProduct - function that update product.
+         * @param: $productId, $name, $description, $price.
+         * Return: true if product is updated, false otherwise.
+         */
+        public function updateProduct($productId, $name, $description, $price) {
+            $sql = "UPDATE products SET name=?, description=?, price=? WHERE id=?";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bind_param("ssdi", $name, $description, $price, $productId);
 
-        return $stmt->execute();
-    }
+            return $stmt->execute();
+        }
 
-    public function deleteProduct($productId) {
-        $sql = "DELETE FROM products WHERE productID=?";
-        $stmt = $this->conn->prepare($sql);
-        $stmt->bind_param("i", $productId);
+        /**
+         * deleteProduct - function that delete product.
+         * @param: $productId.
+         * Return: true if product is deleted, false otherwise.
+         */
+        public function deleteProduct($productId) {
+            $sql = "DELETE FROM products WHERE productID=?";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bind_param("i", $productId);
 
-        return $stmt->execute();
-    }
+            return $stmt->execute();
+        }
 }
 ?>

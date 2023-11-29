@@ -1,5 +1,9 @@
 <?php
- 
+ /**
+  * Category - class that handle category.
+  * @param: $conn - connection to database.
+  * @functions: getCatIdByName.
+  */
 class Category {
     private $conn;
 
@@ -8,10 +12,9 @@ class Category {
     }
 
     /**
-     * getProductsByCategory - Fetch products by category name.
-     * 
-     * @param string $categoryName
-     * @return int
+     * getCatIdByName - function that return category id based on category name.
+     * @param: $categoryName.
+     * Return: category id.
      */
     public function getCatIdByName($categoryName) {
         $sql = "SELECT id FROM categories WHERE name = '$categoryName'";

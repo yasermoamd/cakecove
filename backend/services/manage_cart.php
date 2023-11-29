@@ -2,7 +2,7 @@
 
 function addToCart($id, $name, $description, $price, $image) {
     if (!isset($_SESSION['cart'])) {
-      $_SESSION['cart'] = [];
+      $_SESSION['cart'] = array();
      };
      if (isset($_SESSION['cart'][$id])) {
        $_SESSION['cart'][$id]['quantity']++;

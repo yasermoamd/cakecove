@@ -1,6 +1,18 @@
 <?php
+/**
+ * UtilitiesFunction - class that handle utilities function.
+ */
  class UtilitiesFunction {
     
+    /**
+     * getCategoryFromUrl - function that get category name from URL.
+     * Return: category name.
+     * Get the current URL
+     * Parse the URL
+     * Get the path from the URL
+     * Explode the path by '/' and extract the first element
+     * Return the result
+     */
     public function getCategoryFromUrl() {
             // Get the current URL
         $currentUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";

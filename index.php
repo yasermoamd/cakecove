@@ -11,6 +11,11 @@
   </head>
   <body>
   <?php
+  /**
+   * App - class that handle application.
+   * @param: $database, $utilitie, $category, $product, $conn.
+   * @functions: __construct, run.
+   */
 class App {
 
     private $database;
@@ -19,6 +24,12 @@ class App {
     private $product;
     private $conn;
 
+    /**
+     * __construct - constructor function that create connection to database,
+     *              create utility object, create category and product objects.
+     * Return: connection to database.
+     * Create database connection instance
+     */
     public function __construct() {
         // Include necessary files
         include('./views/navbar.php');
@@ -38,7 +49,16 @@ class App {
         $this->category = new Category($this->conn);
         $this->product = new Product($this->conn);
     }
-
+    /**
+     * run - function that run application.
+     * Return: connection to database.
+     * Create and run the application
+     * Get category name from URL
+     * Get category ID from category name
+     * Get product list by category ID
+     * Display product list
+     * Include footer
+     */
     public function run() {
         $product_list = array();
         // Get category name from URL
@@ -57,10 +77,12 @@ class App {
         include('./views/footer.php');
     }
 }
-      // Create and run the application
-      $app = new App();
-      $app->run();
-    ?> 
+    /**
+     * Create and run the application
+     */
+    $app = new App();
+    $app->run();
+  ?> 
   </body>
 </html>
 
