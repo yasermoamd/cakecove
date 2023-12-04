@@ -4,9 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link type="image/png" sizes="16x16" rel="icon" href="https://img.icons8.com/color/48/shop.png">
-    <link rel="stylesheet" href="./public/css/product.css" />
-    <link rel="stylesheet" href="./public/css/footer.css" />
+    <link type="image/png" sizes="16x16" rel="icon" href="https://img.icons8.com/color/48/shop.png"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-ktQAw6ch1xgkqSYI2tj3P5kMIp90EDVft2Qz31O//5LOUzQ8jc6UqKMJhzj4VvH6F6QQBDS1M9tK4j0e+ia+ig==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Cake Cove</title>
   </head>
@@ -19,74 +17,22 @@
    */
 class App {
 
-    private $database;
-    private $utilitie;
-    private $category;
-    private $product;
-    private $conn;
+    private $database; 
 
     /**
-     * __construct - constructor function that create connection to database,
-     *              create utility object, create category and product objects.
+     * __construct - constructor function that create connection to database, 
      * Return: connection to database.
      * Create database connection instance
      */
     public function __construct() {
         // Include necessary files
-        include('./views/navbar.php');
-        require_once('./backend/config/config.php');
-        require_once('./backend/utilities/func.php');
-        require_once('./backend/services/Category.php');
-        require_once('./backend/services/Product.php'); 
-
-        // Create database connection instance
-        $this->database = new Database();
-        $this->conn = $this->database->conn;
-
-        // Create utility object
-        $this->utilitie = new UtilitiesFunction();
-
-        // Create category and product objects
-        $this->category = new Category($this->conn);
-        $this->product = new Product($this->conn);
-    }
-    /**
-     * run - function that run application.
-     * Return: connection to database.
-     * Create and run the application
-     * Get category name from URL
-     * Get category ID from category name
-     * Get product list by category ID
-     * Display product list
-     * Include footer
-     */
-    public function run() {
-        $product_list = array();
-        // Get category name from URL
-        $category_name = $this->utilitie->getCategoryFromUrl();
-
-        // Get category ID from category name
-        $category_id = $this->category->getCatIdByName($category_name);
-
-        // Get product list by category ID
-        $product_list = $this->product->getProductByCategoryId($category_id);
-
-        // Display product list
-        $this->product->displayProduct($product_list);
-        
-        // display home page.
-        if (!$this->utilitie->getCategoryFromUrl()) {
-             $this->HomePage();
-        }
-
+        include('./views/navbar.php');  
+    } 
+    public function run() { 
         // Include footer
         include('./views/footer.php');
     }
-
-
-    public function HomePage() {
-      echo "<h1>Home Page </h1>";
-    }
+ 
 }
     /**
      * Create and run the application

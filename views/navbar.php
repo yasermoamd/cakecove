@@ -1,57 +1,26 @@
-<?php
-require __DIR__ . '/../backend/models/CategoryType.php';
-
- $categoryType = new CategoryType;
-?>
+ 
   <head>
     <link rel="stylesheet" href="../public/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-ktQAw6ch1xgkqSYI2tj3P5kMIp90EDVft2Qz31O//5LOUzQ8jc6UqKMJhzj4VvH6F6QQBDS1M9tK4j0e+ia+ig==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  </head>
-<header>
-      <h1><a href="/">CakeCove</a></h1>
-      <button class="hamburger-icon" onclick="toggleNav()">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    </head>
+	<header class="masthead">
       <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="<?php echo $categoryType::CAKE; ?>">Cake</a></li>
-          <li><a href="<?php echo $categoryType::CUPCAKE; ?>">CupCake</a></li>
-          <li><a href="<?php echo $categoryType::WEDDING; ?>">Wedding</a></li>
-          <li><a href="<?php echo $categoryType::TREATS; ?>">Treats</a></li>
-          <li><a href="<?php echo $categoryType::ACCESSORIES; ?>">Accessories</a></li>
-        </ul>
-      </nav>
-      <div class="header-right-side">
-        <span>
-          <input type="search" name="" id="" placeholder="Search..." />
-
-          <button>
-            <img src="/public/icons/icons8-search-30.png" alt="" />
-          </button>
-        </span>
-
-        <span>
-          <a href="../views/account.php">
-            <img
-              src="./public/icons/person.png"
-              id="person_img"
-              alt=""
-            />
-          </a>
-
-          <a href="../cart.php">
-            <img src="/public/icons/icons8-bag-50.png" id="bag_img" alt="" />
-          </a>
-        </span>
-      </div>
+          <div class="logo_container">
+              <span class="logo material-icons">bakery_dining</span>
+              <span>Cake Cove</span>
+           </div>
+          <ul class="nav-list">
+            <li class="list-item"><a href="/">Home</a></li>
+            <li class="list-item"><a href="/">Products</a></li>
+            <li class="list-item"><a href="/">About Us</a></li>
+            <li class="list-item"><a href="/">Contact Us</a></li>
+          </ul>
+         </nav>
+          
+        <nav class="right_list">
+          <a href="/cart.php"><span class="cart material-icons">shopping_cart</span></a>
+           <a href="/auth/login.php"><span class="account material-icons">account_circle</span></a>
+        </nav>
+        <span class="menu-toggle material-icons" style="display: none;">menu</span>
     </header>
-
-    <script>
-      function toggleNav() {
-        const nav = document.querySelector('header nav ul');
-        nav.classList.toggle('active');
-      }
-  
-    </script>
