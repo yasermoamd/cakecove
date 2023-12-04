@@ -13,8 +13,8 @@
           <ul class="nav-list">
             <li class="list-item"><a href="/">Home</a></li>
             <li class="list-item"><a href="/">Products</a></li>
-            <li class="list-item"><a href="/">About Us</a></li>
-            <li class="list-item"><a href="/">Contact Us</a></li>
+            <li class="list-item"><a href="/about.php">About Us</a></li>
+            <li class="list-item"><a href="/contactus.php">Contact Us</a></li>
           </ul>
          </nav>
           

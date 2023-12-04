@@ -26,11 +26,11 @@ class App {
      */
     public function __construct() {
         // Include necessary files
-        include('./views/navbar.php');  
+        include('./components/navbar.php');  
     } 
     public function run() { 
         // Include footer
-        include('./views/footer.php');
+        include('./components/footer.php');
     }
  
 }

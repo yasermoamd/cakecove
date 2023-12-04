@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php
-        include('./navbar.php');
+        include('./components/navbar.php');
     ?>
 
  <div class="contact">
@@ -37,12 +37,12 @@
     </div>
 
 
-    <div class="frame">
+    <div class="map_frame">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2311.1510963611113!2d-5.937970523916972!3d54.60133077267981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48610859e474ed1b%3A0xa5a6c74bf074c85e!2sMillfield%2C%20Belfast!5e0!3m2!1sen!2suk!4v1700690826882!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
     <?php
-        include('./footer.php');
+        include('./components/footer.php');
     ?>
 
 </body>

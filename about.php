@@ -11,41 +11,7 @@
   </head>
   <body>
     <!-- navbar for the webpage -->
-    <header>
-      <h1>CakeCove</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="">CupCake</a></li>
-          <li><a href="">Wedding</a></li>
-          <li><a href="">Treats</a></li>
-          <li><a href="">Accessories</a></li>
-        </ul>
-      </nav>
-      <div class="header-right-side">
-        <span>
-          <input type="search" name="" id="" placeholder="Search..." />
-
-          <button>
-            <img src="/public/icons/icons8-search-30.png" alt="" />
-          </button>
-        </span>
-
-        <span>
-          <a href="">
-            <img
-              src="./public/icons/icons8-person-64.png"
-              id="person_img"
-              alt=""
-            />
-          </a>
-
-          <a href="cart.html">
-            <img src="/public/icons/icons8-bag-50.png" id="bag_img" alt="" />
-          </a>
-        </span>
-      </div>
-    </header>
+    <?php include("./components/navbar.php"); ?>
     <!-- Navbar End Here -->
 
     <!--  Start Main content -->
@@ -97,45 +63,7 @@
     </main>
 
     <!-- End of Main content-->
-
-    <!--- Start Footer --->
-    <footer>
-      <div class="top-footer">
-        <div class="left-footer">
-          <p>Menu</p>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">CupCake</a></li>
-            <li><a href="#">Wedding</a></li>
-            <li><a href="#">Treats</a></li>
-            <li><a href="#">Accessories</a></li>
-          </ul>
-        </div>
-
-        <div class="center-footer">
-          <p>Customer Service</p>
-
-          <ul>
-            <li><a href="#">Our Stores</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Policy Privacy</a></li>
-          </ul>
-        </div>
-
-        <div class="right-footer">
-          <p>Social Media</p>
-          <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Youtube</a></li>
-          </ul>
-        </div>
-      </div>
-      <p>Created by Cake Cove. © 2023</p>
-    </footer>
-
+    <?php include("./components/footer.php"); ?>
     <!---End Footer--->
   </body>
 </html>
