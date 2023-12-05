@@ -1,0 +1,47 @@
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 400px;
+  gap: 40px;
+}
+
+form > p {
+  margin: 10px 0px;
+}
+form > h1 {
+  font-family: "Agbalumo", sans-serif;
+  font-size: 36px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.form-control {
+  width: 300px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.form-group > input {
+  padding: 5px;
+}
+
+.form-btn,
+.form > p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  width: 100px;
+  padding: 10px;
+  background-color: #c36e05 !important;
+}
+
+.form {
+  border: 3px solid #fff;
+  padding: 50px;
+  border-radius: 8px;
+}

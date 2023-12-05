@@ -1,106 +1,70 @@
+.masthead {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+.masthead > nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+}
 
-body {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: 'Lato',Helvetica 'Neue',Helvetica,Arial,sans-serif;
+.menu-toggle {
+  margin-right: -0.4rem;
+  margin-top: -0.2rem;
+}
+
+.logo_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  color: #c36e05;
+  font-size: 3rem;
+}
+
+.masthead nav > .nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+}
+.nav-list > .list-item {
+  list-style-type: none;
+}
+.nav-list > .list-item > a {
+  color: #000;
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s ease-in-out;
+}
+
+.account,
+.cart {
+  color: #c36e05;
+}
+
+#searchInput {
+  border: 1px solid red;
 }
 
 header {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  background-color: red;
 }
 
-header > nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+/* @media screen and (max-width: 393px) {
+  .nav-list {
+    display: none;
+  }
 
-header > nav > ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  list-style-type: none;
-  text-decoration: none;
-  gap: 60px;
-}
-
-header > nav > ul > li > a {
-  text-decoration: none;
-  color: black;
-  transition: all 0.3s ease;
-}
-
-header > nav > ul > li {
-  transition: all 0.3s ease;
-}
-
-header > nav > ul > li:hover {
-  transform: scale(1.05);
-}
-
-.header-right-side {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-.header-right-side,
-.header-right-side > span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.header-right-side > span:first-of-type {
-  border: 1px solid black;
-  padding: 0 5px 0 0;
-  border-radius: 5px;
-}
-
-.header-right-side > span:first-of-type > input {
-  border: none;
-  outline: none;
-}
-
-.header-right-side > span:first-of-type > button {
-  width: 30px;
-  height: 30px;
-  background-color: transparent;
-  border: none;
-}
-
-.header-right-side > span:first-of-type > button > img {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-}
-.header-right-side > span:last-of-type {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-#person_img {
-  width: 35px;
-  height: 35px;
-}
-
-#bag_img {
-  width: 25px;
-  height: 25px;
-}
-
-.donunat_banner {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  height: 800px;
-}
-
-.donunat_banner > img {
-  width: 500px;
-  height: 400px;
-}
+  .menu-toggle {
+    display: flex;
+  }
+} */

@@ -1,0 +1,15 @@
+{
+    "name": "yaser/cakecove",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Yaser\\Cakecove\\": "backend/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Yaser Ahmed"
+        }
+    ],
+    "require": {}
+}
