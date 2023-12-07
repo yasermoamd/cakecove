@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../public/css/login.css">   
+    <link rel="stylesheet" href="../public/css/login.css"> 
     <title>Registration</title>
 </head>
 <body>
-       <?php include("../components/navbar.php"); ?>
     <div class="container">
         <?php
             if(isset($_POST['submit'])) {
@@ -17,7 +16,7 @@
                 $password = $_POST['password'];
                 $repeatPassword = $_POST['repeat_password'];
 
-                $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+                // $passwordHash = password_hash($password, PASSWORD_DEFAULT);
                 $errors = array();
 
                 if(empty($fullname) OR empty($email) OR empty($password) OR empty($repeatPassword)) {
@@ -33,7 +32,7 @@
                     array_push($errors, 'Passwords does not match!');
                 }
 
-                require_once '../service/connect.php';
+                require_once '../config/config.php';
                 $sql = "SELECT * FROM users WHERE email = '$email' ";
                 $result = mysqli_query($conn, $sql);
                 $rowCount = mysqli_num_rows($result);
@@ -52,7 +51,7 @@
                     $prepareStmt = mysqli_stmt_prepare($stmt, $sql);
 
                     if($prepareStmt) {
-                        mysqli_stmt_bind_param($stmt, "sss", $fullname, $email, $passwordHash);
+                        mysqli_stmt_bind_param($stmt, "sss", $fullname, $email, $password);
                         mysqli_stmt_execute($stmt);
                         echo '<div class="alert alert-success">You are registered successfully!</div>';
                     }
@@ -84,6 +83,5 @@
             </div>
         </form>
     </div>
-           <?php include("../components/footer.php"); ?>
 </body>
 </html>

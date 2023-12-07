@@ -25,21 +25,6 @@ USE `cakecove`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cake`
---
-
-CREATE TABLE IF NOT EXISTS `cake` (
-  `product_id` int(11) NOT NULL AUTO_INCREMENT,
-  `product_name` varchar(255) DEFAULT NULL,
-  `product_price` decimal(4,2) DEFAULT NULL,
-  `product_description` text,
-  `product_image` text,
-  PRIMARY KEY (`product_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `categories`
 --
 
