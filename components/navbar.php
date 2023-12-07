@@ -2,7 +2,7 @@
     <link rel="stylesheet" href="../public/css/style.css"> 
   </head>
 <nav class="navbar">
-        <div class="brand-title">Cake Cove</div>
+        <div class="brand-title">Cake Cake</div>
         <a href="#" class="toggle-button">
           <span class="bar"></span>
           <span class="bar"></span>

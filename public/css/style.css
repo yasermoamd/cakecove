@@ -11,7 +11,9 @@ body {
   display: flex;
   position: relative;
   justify-content: space-around;
-  align-items: center;  
+  align-items: center;
+  background-color: #333;
+  color: white;
 }
 
 .brand-title {
@@ -42,7 +44,8 @@ body {
 
 .navbar-links li a {
   display: block;
-  text-decoration: none; 
+  text-decoration: none;
+  color: white;
   padding: 1rem;
 }
 

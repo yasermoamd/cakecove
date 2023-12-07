@@ -1,6 +1,6 @@
 html {
-    font-size: 100%;
-}
+        font-size: 100%;
+    }
 body {
     margin: 0;
     font-family: 'Helvetica Neue', sans-serif;
@@ -8,11 +8,10 @@ body {
     font-size: 1rem;
 }
 .container {
-    width: 60vw;
-    height:300px;
+    width: 80vw;
+    height:400px;
     top: 0;
     left: 0;
-    margin-top: 10px;
 }
 .slide-content {
     position: absolute;
