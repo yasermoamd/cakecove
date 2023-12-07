@@ -1,69 +1,98 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap');
-*{
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  body {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
-}
-
-html{
-    height: 100%;
-}
-
-body{
-	font-family: 'Open Sans', sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-}
-
-a{
+    background: #eee;
+  }
+  
+  a {
+    color:#fff;
     text-decoration: none;
-}
-
-footer{
-    background-color: #272727;
-    text-align: center;
+  }
+  
+  a:hover {
+    color:#ccc;
+  }
+  
+  h2 {
+    font-size: 12pt;
+    border-left: 3px #00B0B8 solid;
+    padding-left: 8px;
     text-transform: uppercase;
-    padding-top: 30px;
-    margin-top: auto;
-}
-
-footer li{
-    list-style: none;
-    margin: 10px;
+  }
+  
+  input {
+    border-radius: 1px;
+    border: none;
+    padding: 10px;
+     width: 280px;
+  }
+  
+  button {
+    border-radius: 1px;
+    border: none;
+    padding: 10px 20px;
+    color:#fff;
+    background-color: #00B0B8;
+    text-transform: uppercase;
+  }
+  
+  footer {
+    color: #fff;
+    background-color: #000000b6;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+  }
+  
+  .footer {
+    width: 1200px;
+    margin: auto;
+  }
+  
+  .col {
     display: inline-block;
-}
-
-.icons a{
-    background: #52527a;
-    color: #272727;
-    padding: 14px;
-    font-size: 20px;
-    border-radius: 100%;
-    display: flex;
-}
-.icons a:hover{
-    color: #ffffff;
-    transition: 0.5s;
-}
-
-.menu a{
-    color: #ffffff;
-    text-transform: capitalize;
-}
-.menu a:hover{
-    color: #52527a;
-    transition: 0.5s;
-}
-
-.footer-copyright{
-    background-color:#52527a;
-    color: #ffffff;
-    padding: 15px;
-    margin-top: 30px;
-    text-transform: capitalize;
-}
-
-.footer-copyright p{
-    margin-bottom: 0px;
-}
+    padding-bottom: 15px;
+  }
+  
+  .col-1 {
+    width: 33%;
+  }
+  .col-2 {
+    width: 33%;
+  }
+  .col-3 {
+    width: 33%;
+    text-align: right;
+  }
+  
+  .ftr-menu a {
+    padding-left: 20px;
+  }
+  
+  .social a {
+    padding-left: 15px;
+  }
+  
+  .btm-bar {
+    padding-top: 20px;
+    border-top: #ccc 1px solid;
+    padding-bottom: 40px;
+    font-size: 9pt;
+  }
+  
+  .bar-l {
+    float: left;
+  }
+  .bar-r {
+    text-align: right;
+    float: right;
+  }

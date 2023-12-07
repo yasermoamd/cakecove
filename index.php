@@ -30,6 +30,11 @@ class App {
     } 
     public function run() { 
         // Include footer
+
+        // Include necessary files
+        include('./components/slideshow.php');
+          
+          echo '</div>';
         include('./components/footer.php');
     }
  

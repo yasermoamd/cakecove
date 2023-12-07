@@ -1,64 +1,102 @@
-
-.masthead {
-	align-items: center;
-	display: flex;
-	justify-content: space-around; 
+* {
+  box-sizing: border-box;
 }
 
-.masthead > nav {
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;  
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  margin: .5rem;
+}
+
+.navbar-links {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 1.6rem;
+  justify-content: space-between;
+  height: 100%;
 }
 
-.menu-toggle {
-	margin-right: -0.4rem;
-	margin-top: -0.2rem;
+.register_cart {
+  flex: 1;
 }
 
-.logo_container {
+.navbar-links ul {
   display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  display: block;
+  text-decoration: none; 
+  padding: 1rem;
+}
+
+.navbar-links li:hover {
+  background-color: #555;
+}
+
+.toggle-button {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
 }
 
-.logo {
-	color: #c36e05;
-	font-size: 3rem;
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
 }
 
-
-.masthead nav > .nav-list {  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.6rem;
-}
-.nav-list > .list-item {
-  list-style-type: none;
-}
-.nav-list > .list-item  > a{
-  color: #000;
-  font-size: 0.6rem;
-  font-weight: 600;
-  text-decoration: none;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: color 0.3s ease-in-out;
-}
-
-
-.account , .cart {
-  color: #c36e05;
-}
-
-@media screen and (max-width: 393px) {
-  .nav-list  {
-    display: none;
+@media (max-width: 800px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
   }
 
-  .menu-toggle {
-    display: flex;
+  .toggle-button {
+      display: flex;
+  }
+
+  .navbar-links {
+      display: none;
+      width: 100%;
+  }
+
+  .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+  }
+
+  .navbar-links ul li {
+      text-align: center;
+  }
+
+  .navbar-links ul li a {
+      padding: .5rem 1rem;
+  }
+
+  .navbar-links.active {
+      display: flex;
   }
 }

@@ -1,26 +1,39 @@
-<!--Ionicons-->
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <!--Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+<head>
     <link rel="stylesheet" href="../public/css/footer.css">
 </head>
-<body>
-    <footer>
-        <ul class="icons">
-            <li><a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
-            <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-            <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
-            <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
-        </ul>
-        <ul class="menu">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="/shop.php">Shop</a></li>
-                <li><a href="about.php">AboutUs</a></li>
-                <li><a href="/contactus.php">Contact Us</a></li>
-        </ul>
-            <div class="footer-copyright">
-                <p>Copyright @ 2022 All Rights Reserved.</p>
-            </div>
-    </footer>
+<footer>
+  <div class="footer">
+    
+    <div class="col-1 col">
+      <p>Cake Cove</p>
+      <p>All rights reserved © 2023</p>
+    </div>
+    
+    <div class="col-2 col">
+      <h2>Newsletter Subscription</h2>
+      <input placeholder="Enter your email"></input>
+      <button>Join</button>
+    </div>
+  
+    <div class="col-3 col">
+      <p class="ftr-menu">
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Partner</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </p>
+      <p class="social">
+        <a href="#">facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+      </p>
+    </div> 
+    
+    <div class="btm-bar">
+       <div class="bar-l">Designed and Developed by: <a href="#">WeeCode</a></div>
+      <div class="bar-r"><a href="#">Privacy Policy</a> | <a href="#">Terms and Conditions</a> | <a href="#">Sitemap</a></div>
+    </div>
+  
+  </div>
+</footer>
