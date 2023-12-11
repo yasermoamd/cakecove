@@ -1,39 +1,38 @@
 <head>
-    <link rel="stylesheet" href="../public/css/footer.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+     rel="stylesheet"> 
 </head>
-<footer>
-  <div class="footer">
-    
-    <div class="col-1 col">
-      <p>Cake Cove</p>
-      <p>All rights reserved © 2023</p>
-    </div>
-    
-    <div class="col-2 col">
-      <h2>Newsletter Subscription</h2>
-      <input placeholder="Enter your email"></input>
-      <button>Join</button>
-    </div>
-  
-    <div class="col-3 col">
-      <p class="ftr-menu">
-        <a href="#">Home</a>
-        <a href="#">Products</a>
-        <a href="#">Partner</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-      </p>
-      <p class="social">
-        <a href="#">facebook</a>
-        <a href="#">Twitter</a>
-        <a href="#">Instagram</a>
-      </p>
-    </div> 
-    
-    <div class="btm-bar">
-       <div class="bar-l">Designed and Developed by: <a href="#">WeeCode</a></div>
-      <div class="bar-r"><a href="#">Privacy Policy</a> | <a href="#">Terms and Conditions</a> | <a href="#">Sitemap</a></div>
-    </div>
-  
-  </div>
-</footer>
+ 
+    <footer>
+        <div class="footer">
+            <div class="footer__logo">
+               Cake Cove
+            </div>
+            <div class="footer__menu">
+                 <div class="footer__subscribtion">
+                    <input class="subscription__input__field" placeholder="Enter Your Email Address" type="email" name="subscribe" id="subscribe">
+                    <button class="subscription__button">Subscribe</button>
+                 </div>
+                 <ul class="footer__navlist">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li> 
+                    <li><a href="#">About US</a></li>
+                    <li><a href="#">Contact US</a></li>
+                </ul>
+            </div>
+            <div class="footer__social">
+                <ul>
+                    <li><a href="#" class="material-icons">facebook</a></li>
+                    <li><a href="#" class="material-icons">rss_feed</a></li>
+                    <li><a href="#" class="material-icons">where_to_vote</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <div class="bar-l"> <p>All rights reserved © 2023</p> <a href="#">WeeCode</a></div>
+            <div class="bar-r"><a href="#">Privacy Policy</a> | <a href="#">Terms and Conditions</a> | <a href="#">Sitemap</a></div>
+         </div>
+    </footer> 

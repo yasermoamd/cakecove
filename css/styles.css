@@ -1,0 +1,123 @@
+:root {
+    --color-primary: #f9ed69;
+    --color-secondary: #f08a5d;
+    --color-tertiary: #b83b5e;
+    --color-quaternary:  #000000b6;
+    --color-quinary: #1e1f26;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.product__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.product__list {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 10px; 
+}
+.product__item {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    max-width: 300px;
+}
+
+.product__item article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+    max-width: 250px;
+    text-align: center;
+}
+
+.product__item img {
+    width: 300px;
+    height: 300px;
+}
+
+.view_product {
+    width: 100%;
+    height: auto;
+}
+
+.view_btn {
+    padding: 10px;
+    width: 100px;
+}
+
+.basket_btn {
+    padding: 10px;
+    width: 130px;
+}
+
+@media (max-width: 800px) {
+    .product__container {
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+    .product__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .product__item article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.7rem;
+        max-width: 400px;
+        text-align: center;
+    }
+
+    .product__item  .product__buttons {
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        gap: 0.7rem; 
+    }
+
+    .view_product {
+        width: 100%;
+        height: auto;
+    }
+
+    .view_btn {
+        padding: 10px;
+        width: 140px;
+    }
+
+    .basket_btn {
+        padding: 10px;
+        width: 220px;
+    }
+
+    .product__item img {
+        width: 400px;
+        height: 400px;
+    }
+}

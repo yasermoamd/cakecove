@@ -11,4 +11,4 @@
     echo phpinfo();
    ?>
   </body>
-</html>
+</html> 

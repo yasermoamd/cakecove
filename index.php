@@ -1,53 +1,48 @@
- 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link type="image/png" sizes="16x16" rel="icon" href="https://img.icons8.com/color/48/shop.png"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-ktQAw6ch1xgkqSYI2tj3P5kMIp90EDVft2Qz31O//5LOUzQ8jc6UqKMJhzj4VvH6F6QQBDS1M9tK4j0e+ia+ig==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Cake Cove</title>
-  </head>
-  <body>
-  <?php
-  /**
-   * App - class that handle application.
-   * @param: $database, $utilitie, $category, $product, $conn.
-   * @functions: __construct, run.
-   */
-class App {
+</head>
+<body>
+    <?php 
+      include("./components/Header.php");
+    ?>
+     <main style="height: 100dhv;">
+     <?php
+     
+          include("./utilities/conn.php");
+          $sql = "SELECT * FROM products";
+          $raw_results = $conn->query($sql);
 
-    private $database; 
-
-    /**
-     * __construct - constructor function that create connection to database, 
-     * Return: connection to database.
-     * Create database connection instance
-     */
-    public function __construct() {
-        // Include necessary files
-        include('./components/navbar.php');  
-    } 
-    public function run() { 
-        // Include footer
-
-        // Include necessary files
-        include('./components/slideshow.php');
-          
-          echo '</div>';
-        include('./components/footer.php');
-    }
- 
-}
-    /**
-     * Create and run the application
-     */
-    $app = new App();
-    $app->run();
-  ?> 
-  </body>
+          if ($raw_results !== false && $raw_results->num_rows > 0) {
+            echo "<div class='product__container'>";
+            while($results = mysqli_fetch_assoc($raw_results)){ 
+                echo '
+                <div class="product__list">
+                    <div class="product__item" key="' . $results['id'] . '">
+                        <img src="' . $results['image'] . '" alt="">
+                        <article> 
+                            <h3 class="product_title">' . $results['name'] . '</h3>
+                            <span class="description">' . $results['description'] . '</span>
+                            <span class="product_price">£ ' . $results['price'] . '</span>
+                        </article>
+                        <div class="product__buttons">
+                        <a class="view_product" href="/components/product.php?id=' . $results['id'] .'&title='. $results['name'] .'"> 
+                            <input value="View" type="button" class="view_btn"  /></a>
+                            <input type="button" class="basket_btn" value="Add To Basket" />
+                        </div>
+                    </div>
+                </div>';
+            }
+            echo "</div>";
+              } else{ 
+                  echo "No results";
+              } 
+   ?>
+     </main>
+    <?php include("./components/Footer.php");  ?>
+</body>
 </html>
-
-
-
- 

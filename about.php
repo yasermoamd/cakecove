@@ -2,68 +2,93 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./public/css/style.css" />
-    <link rel="stylesheet" href="./public/css/product.css" />
-    <link rel="stylesheet" href="./public/css/footer.css" />
-    <link rel="stylesheet" href="./public/css/about.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <link rel="stylesheet" href="./css/about.css" />
     <title>About - Cake Cove</title>
   </head>
   <body>
     <!-- navbar for the webpage -->
-    <?php include("./components/navbar.php"); ?>
+    <?php include("./components/Header.php"); ?>
     <!-- Navbar End Here -->
 
     <!--  Start Main content -->
     <main>
-      <section class="main_section">
-        <div class="our_story">
-          <img
-            src="https://www.lolascupcakes.co.uk/image/about_header.png?Version=132935544180000000"
-            alt="Our story"
-          />
-        </div>
-        <div class="story_description">
-          <h3>Our Story</h3>
-          <p>
-            Our story For fresh, handcrafted and simply delicious cupcakes,
-            cakes and brownies, Lola’s Cupcakes is just the answer. You may have
-            seen us in when passing through Waterloo, Liverpool Street or
-            Victoria station or perhaps you caught a glimpse of us whilst
-            shopping in Selfridges, Westfield or Brent Cross. Wherever you enjoy
-            a Lola's, you can be assured that our entire range of products are
-            made fresh by hand each day, using only the best ingredients.
-            Starting things the old fashioned way, Lola’s Cupcakes was born back
-            in 2006, when two friends, Victoria Jossel and Romy Lewis, turned
-            baking into a business. With orders pouring in, the pair opened
-            concessions in Selfridges, Topshop and a flagship store in Mayfair.
-            Today we have over 30 locations including stores and collection
-            lockers and deliver lots of products nationwide.
-          </p>
-        </div>
-      </section>
-
-      <section class="service_section">
-        <div>
-          <img src="./public/icons/truck.svg" alt="" />
+       <section></section>
+       <section class="services">
+        <div class="col">
+          <img src="./icons/truck.svg" alt="" />
           <span>10291</span>
           <p>Delivery been serviced</p>
         </div>
-        <div>
-          <img src="./public/icons/cupcake.svg" alt="" />
+        <div class="col">
+          <img src="./icons/cupcake.svg" alt="" />
           <span>93.3372</span>
           <p>CupCake serviced</p>
         </div>
-        <div>
-          <img src="./public/icons/candle.svg" alt="" />
+        <div class="col">
+          <img src="./icons/candle.svg" alt="" />
           <span>2.901932</span>
           <p>Birthday serviced</p>
         </div>
       </section>
+       <section class="about__faq">
+          <div class="faq-header">Frequently Asked Questions</div>
+          <div class="faq-content">
+            <div class="faq-question">
+              <input id="q1" type="checkbox" class="panel">
+              <div class="plus">+</div>
+              <label for="q1" class="panel-title">What products do you offer?</label>
+              <div class="panel-content">We offer a wide range of freshly baked goods, including bread, cakes, pastries, cookies, and more. 
+                Explore our menu to discover our delicious offerings.</div>
+            </div>
+            
+            <div class="faq-question">
+              <input id="q2" type="checkbox" class="panel">
+              <div class="plus">+</div>
+              <label for="q2" class="panel-title">How do I place an order?</label>
+              <div class="panel-content">
+                To place an order, simply browse our website, select the items you want, and add them to your cart. 
+                Follow the checkout process to provide your delivery details and complete your purchase.</div>
+            </div>
+
+            <div class="faq-question">
+              <input id="q2" type="checkbox" class="panel">
+              <div class="plus">+</div>
+              <label for="q2" class="panel-title">Can I customize my order?</label>
+              <div class="panel-content">
+                Yes, we offer customization options for certain products. <br/>
+                Please check the product description or contact our customer support to inquire about customization possibilities.</div>
+            </div>
+
+            <div class="faq-question">
+              <input id="q2" type="checkbox" class="panel">
+              <div class="plus">+</div>
+              <label for="q2" class="panel-title">What payment methods do you accept?</label>
+              <div class="panel-content">
+                We accept major credit cards, debit cards, and other secure payment methods. <br />
+                Your payment information is encrypted for a secure transaction.</div>
+            </div>
+
+            <div class="faq-question">
+              <input id="q2" type="checkbox" class="panel">
+              <div class="plus">+</div>
+              <label for="q2" class="panel-title">Do you offer delivery?</label>
+              <div class="panel-content">Absolutely! We prioritize the security of your information. Our website uses encryption technology to ensure a safe and secure online shopping experience.</div>
+            </div>
+            
+            <div class="faq-question">
+              <input id="q3" type="checkbox" class="panel">
+              <div class="plus">+</div>
+              <label for="q3" class="panel-title">How can I contact customer support?</label>
+              <div class="panel-content" >You can reach our customer support team through the <a href="contact.php">Contact Us</a> page on our website or via email at [support@cakecove.com]. We aim to respond to inquiries within an hour between our working time.</div>
+            </div>
+          </div>
+       </section>
+     
     </main>
 
     <!-- End of Main content-->
-    <?php include("./components/footer.php"); ?>
+    <?php include("./components/Footer.php"); ?>
     <!---End Footer--->
   </body>
 </html>
