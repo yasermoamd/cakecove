@@ -56,6 +56,7 @@
                         mysqli_stmt_bind_param($stmt, "sss", $fullname, $email, $password);
                         mysqli_stmt_execute($stmt);
                         echo '<div class="alert alert-success">You are registered successfully!</div>';
+                        header("Location: ./login.php");
                     }
                     else {
                         die("Something went wrong");

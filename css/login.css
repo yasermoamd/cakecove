@@ -1,4 +1,19 @@
+.login__block {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 60px;
+}
 
+.welcome__image {
+  width: 500px;
+  border: 1px solid #ccc;
+}
+
+.form__section {
+  width: 500px;
+  border: 1px solid #ccc;
+}
 
 .page__link {
   color: #333;
@@ -10,20 +25,32 @@
   display: inline-block;
   transition: all 0.3s;
 }
+
+.form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 700px;
+  gap: 5px;
+}
+
 @media (max-width: 800px) {
-  .welcome__image  h1{
+  .welcome__image {
     display: none;
   }
   .login__image {
     display: none;
   }
+  .form__section {
+    border: none;
+    height: 55vh;
+  }
+
   form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center; 
-    gap: 1rem;
-    margin: 20px 2rem;
+    align-content: center;
   }
 
   form input {

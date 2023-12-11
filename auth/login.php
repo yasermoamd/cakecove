@@ -16,7 +16,7 @@
             $email = $_POST['email'];
             $password = $_POST['password'];
             
-            require_once '../config/config.php';
+            require_once '../utilities/conn.php';
             
             $sql = "SELECT * FROM users WHERE email = '$email'";
             $result = mysqli_query($conn, $sql);
@@ -30,10 +30,11 @@
                     if ($password === $storedPassword) {
                         session_start();
                         $_SESSION["user"] = "yes";
-                        header("Location: /login.php");
+                        echo 'login successfully!';
+                        header("Location: ../index.php");
                         die();
                     } else {
-                        echo "<div class='alert alert-danger'>Password does not match!</div>";
+                        echo "<div class='alert-danger'>Password does not match!</div>";
                     }
                 } else {
                     echo "<div class='alert alert-danger'>Email not found!</div>";
@@ -44,20 +45,32 @@
         }
         ?>
 
-        <section class="form">
+        <section class="login__block" title="Log in section">
+
             <div class="welcome__image">
                 <h1>Welcome Back!</h1>
             </div>
-            <form action="" method="post">
-                <h1>Login</h1>
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Enter your email" required  autocomplete="off" />
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="Enter your password" required  autocomplete="off" />
-                <button type="submit" name="login" id="form__button">Login</button>
-                <a class="page__link" href="register.php">Don't have an account? Register here</a>
-        </form>
-        </section>
+
+            <form action="login.php" method="post">
+                <div class="form" style="height: 300px;">
+                    <h1>Login</h1>
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email" placeholder="Your Email:" require>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="password" placeholder="Your Password:" require>
+                    </div>
+
+                    <p><a href="register.php">You don't have an account?</a></p>
+
+                    <div class="form-btn">
+                        <input type="submit" class="btn btn-primary" value="Login" name="login">
+                    </div>
+                </div>
+            </form>
+
+         </section>
     </div>
 
     <?php include_once('../components/Footer.php'); ?>
