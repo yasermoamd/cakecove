@@ -30,8 +30,18 @@
                     if ($password === $storedPassword) {
                         session_start();
                         $_SESSION["user"] = "yes";
-                        echo 'login successfully!';
-                        header("Location: ../index.php");
+                        $_SESSION["loggedin"] = true;
+                        $isAdmin = "SELECT is_admin FROM users WHERE email = '$email' ";
+                        $isAdmin_result = mysqli_query($conn, $isAdmin); // Corrected the variable name here
+                        if ($isAdmin_result) {
+                            // Check if the user is an admin
+                            $row = $isAdmin_result->fetch_assoc(); // Corrected the variable name here
+                            if ($row['is_admin'] == '1') {
+                                header("Location: ../dashboard/index.php");
+                            } else {
+                                header("Location: ../index.php");
+                            }
+                        }
                         die();
                     } else {
                         echo "<div class='alert-danger'>Password does not match!</div>";
