@@ -30,7 +30,10 @@
                     <div class="box__4"></div>
                 </div>
             </section>
-            <h1>Product Table</h1>
+            <section class="product__table">
+                <h1>Product Table</h1>
+                
+            </section>
         </section>
     </main>
 </body>
