@@ -17,6 +17,7 @@
           <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/products.php">Products</a></li> 
+          
           <li><a href="/about.php">About US</a></li>
           <li><a href="/contact.php">Contact US</a></li> 
           <div class="register_cart">

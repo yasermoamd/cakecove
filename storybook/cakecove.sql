@@ -100,11 +100,7 @@ CREATE TABLE IF NOT EXISTS `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `name`, `price`, `description`, `image`, `categoryID`, `created`, `updated`) VALUES
-(1, 'Snowballs Caramel(pack of 4)', '6.95', 'Delicious buns, coated Caramel in icing and coconut Caramel and filled with raspberry jam', 'https://frenchvillage.com/cdn/shop/files/snowballimage_720x.jpg', 5, '2023-12-04 14:35:48', '2023-12-04 14:35:48'),
-(2, 'Eton Mess Cake Caramel', '50.00', 'Deeee-licious raspberry & white chocolate sponge with marshmallow buttercream Caramel layers, 100% real irish jam & white chocolate chunks. ', 'https://frenchvillage.com/cdn/shop/products/etonmess_720x.jpg', 3, '2023-12-04 14:35:48', '2023-12-04 14:35:48'),
-(3, 'Kinder Bueno Cake Caramel', '48.50', 'Chocolate cake layered with hazelnut Caramel chocolate ganache and encased in a praline Caramel buttercream icing. ', 'https://frenchvillage.com/cdn/shop/products/Bueno_720x.jpg', 3, '2023-12-04 14:35:48', '2023-12-04 14:35:48');
-
+dfrol
 -- --------------------------------------------------------
 
 --
@@ -124,7 +120,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `email`, `password`, `username`) VALUES
-(1, 'admin@admin.com', 'admin', 'admin');
+(1, 'admin@admin.com', 'admin12345', 'admin');
 
 --
 -- Constraints for dumped tables

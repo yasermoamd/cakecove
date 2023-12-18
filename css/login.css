@@ -34,6 +34,10 @@
   gap: 5px;
 }
 
+.form-group > input:focus{
+  outline: none;
+}
+
 @media (max-width: 800px) {
   .welcome__image {
     display: none;
@@ -51,6 +55,7 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    gap: 10px;
   }
 
   form input {

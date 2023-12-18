@@ -23,6 +23,7 @@
                     <div class="box__1">
                         <div class="box__details">
                             <p class="material-icons">face</p>
+                            <h3>Users</h3>
                         </div>
                     </div>
                     <div class="box__2"></div>
@@ -35,6 +36,6 @@
                 
             </section>
         </section>
-    </main>
+    </main> 
 </body>
 </html>

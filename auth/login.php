@@ -17,13 +17,25 @@
             $password = $_POST['password'];
             
             require_once '../utilities/conn.php';
+
+            /**
+             * $sql - var store query
+             * $result - store result of query
+             * 
+             */
             
             $sql = "SELECT * FROM users WHERE email = '$email'";
             $result = mysqli_query($conn, $sql);
             
+            /**
+             * if return result
+             */
             if ($result) {
                 $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
                 
+                /**
+                 * if user exsist  compare password
+                 */
                 if ($user) {
                     $storedPassword = $user['password'];
                     
@@ -35,10 +47,17 @@
                         $isAdmin_result = mysqli_query($conn, $isAdmin); // Corrected the variable name here
                         if ($isAdmin_result) {
                             // Check if the user is an admin
+                            $_SESSION["isAdmin"] = true;
                             $row = $isAdmin_result->fetch_assoc(); // Corrected the variable name here
+                            /**
+                             * if user is admin redirect to dashboard
+                             */
                             if ($row['is_admin'] == '1') {
                                 header("Location: ../dashboard/index.php");
                             } else {
+                                /**
+                                 * normal user redirect to product page.
+                                 */
                                 header("Location: ../index.php");
                             }
                         }

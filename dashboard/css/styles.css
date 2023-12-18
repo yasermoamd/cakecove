@@ -33,23 +33,34 @@ section.dash__info__container > .content {
   gap: 5.5rem;
 }
 .box__1 {
-  width: 200px;
-  height: 150px;
-  background-color: green;
+  width: 100px;
+  height: 80px;
+   
+}
+.box__details {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 1rem;
+  left: 1.5rem;
+}
+
+.box__details > p {
+  font-size: 3rem;
 }
 .box__2 {
-  width: 200px;
-  height: 150px;
-  background-color: yellowgreen;
+  width: 100px;
+  height: 80px;
+  border: 1px solid black;
 }
 .box__3 {
-  width: 200px;
-  height: 150px;
-  background-color: greenyellow;
+  width: 100px;
+  height: 80px;
+  border: 1px solid black;
 }
 
 .box__4 {
-  width: 200px;
-  height: 150px;
-  background-color: yellow;
+  width: 100px;
+  height: 80px;
+  border: 1px solid black;
 }
