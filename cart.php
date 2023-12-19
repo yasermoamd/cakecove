@@ -41,6 +41,7 @@ $cart = isset($_SESSION["cart"]) ? $_SESSION["cart"] : [];
                     <th>Product</th>
                     <th>Price</th>
                     <th>Quantity</th>
+                    <th>action</th>
                     <th>Total</th>
                 </tr>
             </thead>
@@ -63,6 +64,7 @@ $cart = isset($_SESSION["cart"]) ? $_SESSION["cart"] : [];
                         <?php else : ?>
                             <td>Total not available</td>
                         <?php endif; ?>
+                        <td><button onclick="<?php session_destroy(); ?>">remove</button></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

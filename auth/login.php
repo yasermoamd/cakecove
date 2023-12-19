@@ -75,31 +75,28 @@
         ?>
 
         <section class="login__block" title="Log in section">
-
-            <div class="welcome__image">
-                <h1>Welcome Back!</h1>
-            </div>
-
             <form action="login.php" method="post">
                 <div class="form" style="height: 300px;">
                     <h1>Login</h1>
                     <div class="form-group">
                         <input type="email" class="form-control" name="email" placeholder="Your Email:" require>
                     </div>
-
+        
                     <div class="form-group">
                         <input type="password" class="form-control" name="password" placeholder="Your Password:" require>
                     </div>
 
-                    <p><a href="register.php">You don't have an account?</a></p>
-
                     <div class="form-btn">
                         <input type="submit" class="btn btn-primary" value="Login" name="login">
                     </div>
+
+                    <div class="reset_link">
+                        <p>You don't have an account?</p>
+                        <a href="/auth/register.php">Register</a>
+                    </div>    
                 </div>
             </form>
-
-         </section>
+        </section>
     </div>
 
     <?php include_once('../components/Footer.php'); ?>

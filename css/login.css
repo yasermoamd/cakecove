@@ -2,12 +2,36 @@
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  gap: 60px;
 }
 
-.welcome__image {
-  width: 500px;
+.form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form > .form-group > input{
+  padding: 12px;
+  border-radius: 10px;
   border: 1px solid #ccc;
+}
+
+.form > .form-group > input  {
+  min-width: 300px;
+  min-height: auto;
+}
+.form > .form-group > input:focus {
+  outline: none;
+}
+
+.form-btn > input{
+  min-width: 300px;
+  height: 45px; 
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  background-color: #333;
+  color: #fff;
 }
 
 .form__section {
@@ -15,69 +39,67 @@
   border: 1px solid #ccc;
 }
 
-.page__link {
-  color: #333;
-  text-align: center;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 700;
-  margin-top: 1rem;
-  display: inline-block;
-  transition: all 0.3s;
-}
-
-.form {
+.reset_link {
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  height: 700px;
-  gap: 5px;
+  align-items: center;
+  gap: 0.5rem;
+  
+}
+.reset_link > p {
+  font-size: 1.2rem;
+}
+.reset_link > a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem; 
 }
 
-.form-group > input:focus{
-  outline: none;
+.reset_link > a:hover {
+  text-decoration: underline;
+  color: blueviolet;
 }
-
 @media (max-width: 800px) {
   .welcome__image {
-    display: none;
+      display: none;
   }
   .login__image {
-    display: none;
+      display: none;
   }
   .form__section {
-    border: none;
-    height: 55vh;
+      border: none;
+      height: 55vh;
   }
 
-  form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    gap: 10px;
+  .form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      gap: 1em;
   }
 
-  form input {
-    width: 100%;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    border: 1px solid #ccc;
-    outline: none;
-    font-size: 1rem;
+  .form > .form-group > input {
+      min-width: 300px;
+      min-height: auto;
+      padding: 0.8rem;
+      border-radius: 0.5rem;
+      border: 1px solid #ccc;
+      outline: none;
+      font-size: 1rem;
   }
 
-  form button {
-    width: 100%;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    border: none;
-    outline: none;
-    font-size: 1rem;
-    font-weight: 700;
-    background-color: #333;
-    color: #fff;
-    cursor: pointer;
-    transition: all 0.3s;
+  .form > .form-btn> input[type="submit"] {
+      width: 100%;
+      padding: 0.8rem;
+      border-radius: 0.5rem;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      font-weight: 700;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.3s;
   }
 }

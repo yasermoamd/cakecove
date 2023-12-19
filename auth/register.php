@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="../css/login.css"> 
+     <link rel="stylesheet" href="../css/register.css"> 
      <link rel="stylesheet" href="../css/header.css">
      <link rel="stylesheet" href="../css/footer.css">
     <title>Registration</title>
@@ -64,35 +64,38 @@
                 }
             }
         ?>
-        <section class="form" title="sign up regisration section">
-            <div class="welcome__image">
-                <h1>Welcome Here!</h1>
-            </div>
+        <section class="login__block" title="sign up regisration section">
             <form action="" method="post" class="registration form">
-                <h1 class="registration form title">Registration</h1>
+                <div class="form" style="height: 300px;">
+                 <h1 class="registration form title">Registration</h1>
+                    <div class="form-group">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" name="fullname" id="fullname" placeholder="Enter your Full Name" required autocomplete="off">
+                    </div>
 
-                <div class="form-group">
-                    <label for="fullname">Full Name</label>
-                    <input type="text" name="fullname" id="fullname" placeholder="Enter your Full Name" required autocomplete="off">
-                </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Enter your email" required autocomplete="off">
+                    </div>
 
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="Enter your email" required autocomplete="off">
-                </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="Enter your password" required autocomplete="off">
+                    </div>
 
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" placeholder="Enter your password" required autocomplete="off">
-                </div>
+                    <div class="form-group">
+                        <label for="repeat_password">Repeat Password</label>
+                        <input type="password" name="repeat_password" id="repeat_password" placeholder="Repeat your password" required autocomplete="off">
+                    </div>
 
-                <div class="form-group">
-                    <label for="repeat_password">Repeat Password</label>
-                    <input type="password" name="repeat_password" id="repeat_password" placeholder="Repeat your password" required autocomplete="off">
-                </div>
-
-                <button type="submit" name="submit" id="form__button">Register</button>
-                <a class="page__link" href="login.php">Already have an account? Login here</a>
+                    <div class="form-btn">
+                            <input type="submit" class="btn btn-primary" value="Register" name="login">
+                        </div>
+                    <div class="reset_link">
+                            <p>Already Have an account?</p>
+                            <a href="/auth/login.php">Log in</a>
+                        </div>    
+                 </div>
         </form>
 
          </section>
