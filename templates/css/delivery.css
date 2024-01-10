@@ -1,0 +1,11 @@
+.thanks-message {
+    width: 750px;
+    background-color: white;
+    border: 3px solid white;
+    color: #000b4e;
+    border-radius: 4px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}

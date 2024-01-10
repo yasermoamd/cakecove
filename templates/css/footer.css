@@ -1,0 +1,102 @@
+footer {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    margin-top: 50px;
+    padding: 10px 0;
+}
+
+footer > p {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer > div > nav > ul {
+    display: flex;
+    gap: 20px;
+}
+
+footer > div > nav:first-of-type > ul, footer > div > nav:last-of-type > ul {
+    list-style-type: none;
+}
+
+footer > div > nav:first-of-type > ul > li, footer > div > nav:last-of-type > ul > li {
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+footer > div > nav:first-of-type > ul > li:hover, footer > div > nav:last-of-type > ul > li:hover {
+    transform: scale(1.1);
+}
+
+footer > div > nav:last-of-type > ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer > div > nav:first-of-type > ul > li > a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+footer > div > nav:last-of-type > ul > li > img {
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+}
+
+footer > div > form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+footer > div > form > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+footer > div > form > span > input {
+    width: 360px;
+    height: 40px;
+    padding: 10 20px;
+    border-radius: 8px;
+    border: none;
+}
+
+footer > div > form > span > button {
+    width: 120px;
+    height: 25px;
+    border: none;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    footer > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    footer > div > nav > ul {
+        display: flex; 
+    }
+}

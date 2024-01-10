@@ -1,0 +1,65 @@
+@import "style.css";
+
+@media only screen and (max-width: 400px) {
+   .slide__block,
+    header > span > button:first-of-type,
+    hr, footer > div > nav:first-of-type,
+    footer > div > nav:last-of-type, #nav-menu {
+    display: none;
+   }
+
+   .food-row {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+   }
+
+   .food-card {
+    margin-top: 20px;
+    width: 200px;
+   }
+
+   #img {
+    width: 200px;
+    
+   }
+
+   header {
+    margin-bottom: 50px;
+   }
+
+   footer > div > form > span > input {
+    width: 260px;
+    height: 40px;
+   }
+
+   header > a, #menu-text {
+    font-size: 20px;
+   }
+
+   #menu-text {
+    margin-top: 30px;
+   }
+
+   #product_desc {
+    width: 200px;
+   }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+
+    .slide__block, hr, header > span > button:first-of-type {
+        display: none;
+    }
+}

@@ -1,0 +1,40 @@
+ 
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 700px;
+    gap: 20px;
+}
+
+form > h1 {
+    font-family: 'Agbalumo', sans-serif;
+    font-size: 36px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.form-control {
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.form-btn, .form > p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-primary {
+    width: 125px;
+}
+
+.form {
+    border: 3px solid #fff;
+    padding: 50px;
+    border-radius: 8px;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.4);
+}

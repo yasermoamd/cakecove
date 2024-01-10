@@ -1,0 +1,65 @@
+@import "style.css";
+
+.popup-message {
+    border: 3px solid #fff;
+    border-radius: 8px;
+    background-color: #fff;
+    transform: translateX(300%);
+    z-index: 1000;
+    color: #000b4e;
+    width: 400px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+    animation: slideInRight .5s ease;
+} 
+
+.popup-message-content {
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.popup-message-content > p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.popup-message-content > p > span {
+    font-size: 16px;
+    color: #000b4e;
+}
+
+#done-img {
+    margin-right: 5px;
+}
+
+.closing {
+    animation: slideOut 0.5s ease-out; 
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(600%);
+    }
+    100% {
+        transform: translateX(300%);
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateX(300%);
+    }
+    100% {
+        transform: translateX(600%);
+    }
+}
