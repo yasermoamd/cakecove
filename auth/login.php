@@ -11,12 +11,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../templates/css/signIn.css">
-    <link rel="stylesheet" href="../templates/css/style.css">
-    <link rel="icon" type="image/x-icon" href="../templates/img/user.png">
+    <link rel="stylesheet" href="../assets/css/signIn.css"> 
+    <link rel="stylesheet" href="../assets/css/header.css"> 
     <title>Login</title>
 </head>
 <body>
+    <?php include '../components/Header.php'; ?>
     <div class="container">
     <?php
         if(isset($_POST['login'])) {
@@ -67,5 +67,7 @@
             </div>
         </form>
     </div>
+
+    <?php include '../components/Footer.php'; ?>
 </body>
 </html>

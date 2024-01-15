@@ -32,8 +32,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['action']) && $_POST['
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./templates/css/style.css">
-    <link rel="stylesheet" href="./templates/css/notification.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/notification.css">
     <title>Cake Cove</title>
 </head>
 <body>
@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['action']) && $_POST['
         <div class="slideshow"></div>
         <div class="text">
             <span>
-                <h1>Do you want to test our food?</h1>
+                <h1>Do you want to test our Cake?</h1>
                 <p>Click to the button below and get it now!</p>
                 <button><a href="#food-section">Buy now!</a></button>
             </span>
@@ -88,13 +88,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['action']) && $_POST['
                                         <p id="product_desc">' . $row['product_description'] . '</p>
                                         <p>Price: <span>£ ' . $row['product_price'] . '</span></p>
                                     </span>
+                                     <div class="buttons">
+                                        <form method="post" action="./pages/product_details.php/id='. $row['product_id'] .'">
+                                            <input type="hidden" name="product_id" value="' . (isset($row['product_id']) ? $row['product_id'] : '') . '">
+                                            <input type="hidden" name="action" value="add">
+                                            <input type="submit" value="View">
+                                        </form>
+                                        
+                                        <form method="post" action="' . $_SERVER["PHP_SELF"] . '" onsubmit="showPopup();">
+                                            <input type="hidden" name="product_id" value="' . (isset($row['product_id']) ? $row['product_id'] : '') . '">
+                                            <input type="hidden" name="action" value="add">
+                                            <input type="submit" value="Add to Cart">
+                                        </form>
 
-                                    <form method="post" action="' . $_SERVER["PHP_SELF"] . '" onsubmit="showPopup();">
-                                        <input type="hidden" name="product_id" value="' . (isset($row['product_id']) ? $row['product_id'] : '') . '">
-                                        <input type="hidden" name="action" value="add">
-                                        <input type="submit" value="Add to Cart">
-                                    </form>
-
+                                     </div>
 
                                 </container>
                             </div>';

@@ -10,39 +10,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
      rel="stylesheet"> 
-    <link rel="stylesheet" href="../templates/css/style.css">
-    <link rel="stylesheet" href="../templates/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
 </head>
 <body>
 <footer>
-        <div>
-            <nav>
-                <ul>
-                <li><a href="../index.php">Home</a></li>
-                <li><a href="../templates/aboutUs.php">About us</a></li>
-                <li><a href="../templates/gallery.php">Gallery</a></li>
-                <li><a href="../templates/faq.php">FAQ</a></li>
-                <li><a href="../templates/contact.php">Contact us</a></li>
+        <div class="footer">
+            <div class="footer__logo">
+               Cake Cove
+            </div>
+            <div class="footer__menu">
+                 <div class="footer__subscribtion">
+                    <input class="subscription__input__field" placeholder="Enter Your Email Address" type="email" name="subscribe" id="subscribe">
+                    <button class="subscription__button">Subscribe</button>
+                 </div>
+                 <ul class="footer__navlist">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li> 
+                    <li><a href="#">About US</a></li>
+                    <li><a href="#">Contact US</a></li>
                 </ul>
-            </nav>
-
-            <form>
-                <h1>Contact us</h1>
-                <span>
-                    <input type="tel" placeholder="+44 ()">
-                    <button>Submit</button>
-                </span>
-            </form>
-
-            <nav>
+            </div>
+            <div class="footer__social">
                 <ul>
-                    <li><img src="./templates/img/instagram.png" alt=""></li>
-                    <li><img src="./templates/img/facebook.png" alt=""></li>
-                    <li><img src="./templates/img/twitter.png" alt=""></li>
-                    <li><img src="./templates/img/tik-tok.png" alt=""></li>
+                    <li><a href="#" class="material-icons">facebook</a></li>
+                    <li><a href="#" class="material-icons">rss_feed</a></li>
+                    <li><a href="#" class="material-icons">where_to_vote</a></li>
                 </ul>
-            </nav>
+            </div>
         </div>
-    </footer>
+        <div class="footer__copyright">
+            <div class="bar-l"> <p>All rights reserved © 2023</p> <a href="#">WeeCode</a></div>
+            <div class="bar-r"><a href="#">Privacy Policy</a> | <a href="#">Terms and Conditions</a> | <a href="#">Sitemap</a></div>
+         </div>
+    </footer> 
 </body>
 </html>

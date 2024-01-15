@@ -1,5 +1,5 @@
 function showDeliveryForm() {
-    document.getElementById('delivery-form').style.display = 'block';
+    document.getElementById('delivery-form').style.display = 'flex';
 }
 
 function closeDeliveryForm() {

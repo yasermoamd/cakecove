@@ -111,7 +111,7 @@ function renderCart() {
         echo "</tr>";
 
         echo "
-            <div id='delivery-form' class='popup-form'>
+            <div style='display:hidden;' id='delivery-form' class='popup-form'>
                 <div class='popup-form-content'>
                     <span class='close' onclick='closeDeliveryForm()'>&times;</span>
                     <h2>Delivery Information</h2>

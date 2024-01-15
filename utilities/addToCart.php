@@ -1,5 +1,5 @@
 <?php
-require_once('./service/connect.php');
+require_once('../service/connect.php');
 
 function addToCart($productId, $quantity) {
     global $conn;

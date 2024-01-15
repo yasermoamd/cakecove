@@ -10,6 +10,7 @@
     <title>Registration</title>
 </head>
 <body>
+    <?php include '../templates/header.php'; ?>
     <div class="container">
         <?php
             if(isset($_POST['submit'])) {
@@ -85,5 +86,7 @@
             </div>
         </form>
     </div>
+
+    <?php include '../templates/footer.php'; ?>
 </body>
 </html>

@@ -1,0 +1,192 @@
+@import url('style.css');
+
+footer {
+    background-color: #000000b6;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    margin-top: 1rem;
+    padding: 10px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer__logo {    
+    align-items: center;
+    display: flex;
+    font-size: 1.4em;
+}
+
+.footer__menu { 
+    display: flex; 
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.footer__subscribtion {
+    margin-top: 2rem;
+}
+
+.subscription__input__field {
+    border-radius: 1px;
+    border: none;
+    padding: 10px;
+    width: 280px;
+}
+
+.subscription__button {
+    border-radius: 1px;
+    border: none;
+    padding: 10px 20px;
+    color:#fff;
+    background-color: #00B0B8;
+    text-transform: uppercase;
+  }
+
+.footer__navlist {
+    margin-bottom: 2rem;
+    display: flex;
+    list-style: none;  
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; 
+}
+
+.footer__navlist a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.footer__social ul { 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    margin-right: 3rem;
+
+}
+.footer__social ul  li {
+    list-style: none;
+}
+.footer__social ul  li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+
+.footer__copyright {
+    text-align: center;
+    max-width: 100%; 
+
+}
+.footer__copyright a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+.footer__copyright .bar-l .bar-r {
+    display: flex;
+    max-width: 100dvw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+} 
+
+.footer__copyright .bar-l {
+    margin-bottom: 1em;
+}
+@media only screen and (max-width: 800px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem
+    }
+    .footer__logo {
+        margin: 10px 0px;
+    }
+    .footer__navlist {
+        margin-bottom: 0;
+    }
+    .subscription__input__field {
+        border-radius: 1px;
+        border: none;
+        padding: 8px;
+        width: 200px;
+    }
+    
+    .subscription__button {
+        border-radius: 1px;
+        border: none;
+        padding: 8px 10px;
+        color:#fff;
+        background-color: #00B0B8;
+        text-transform: uppercase;
+      }
+
+      .footer__copyright {
+        display: flex;
+        flex-direction: column; 
+      }
+      .footer__copyright .bar-l {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap : 10px; 
+    }
+    .footer__copyright .bar-l > a {
+        color: wheat;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .subscription__input__field {
+        border-radius: 1px;
+        border: none;
+        padding: 8px;
+        width: 130px;
+    }
+    
+    .subscription__button {
+        border-radius: 1px;
+        border: none;
+        padding: 8px 10px;
+        color:#fff;
+        background-color: #00B0B8;
+        text-transform: uppercase;
+      }
+
+    .footer__copyright {
+        margin-top: 2rem;
+    }
+    .footer__copyright .bar-l {
+        margin-top: 20px;
+    }
+    .subscription__input__field::placeholder { 
+        font-size: 0.6rem;
+    }
+
+    .footer__copyright {
+        display: flex;
+        flex-direction: column; 
+      }
+      .footer__copyright .bar-l {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap : 10px; 
+    }
+    .footer__copyright .bar-l > a {
+        color: wheat;
+    }
+}

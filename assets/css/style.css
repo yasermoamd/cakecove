@@ -8,13 +8,24 @@
 @import "footer.css";
 @import "faq.css";
 
+:root {
+    --color-primary: #f9ed69;
+    --color-secondary: #f08a5d;
+    --color-tertiary: #b83b5e;
+    --color-quaternary:  #000000b6;
+    --color-quinary: #1e1f26;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
-body{
-    margin: 0;
-    padding: 0;
+body{ 
     font-family: 'Poppins', sans-serif;
     /*background-color: #000b4e; 
     color: #fff; */
@@ -30,7 +41,8 @@ body{
     justify-content: center;
     width: 1500px;
     height: 600px;
-    background-image: url('../img/background.png');
+    background-image: url('https://www.cakebox.com/media/catalog/product/cache/df0d01e22a8a85d2938ee701a1022427/s/q/sq149.jpg');
+    object-fit: cover;
     background-size: cover;
     position: relative;
     margin-left: auto;
@@ -91,50 +103,4 @@ body{
     font-size: 40px;
     font-family: 'Agbalumo', sans-serif;
 }
-
-.food-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    gap: 20px;
-}
-
-.food-card {
-    border: 3px solid #fff; 
-    border-radius: 4px;
-    padding: 5px 10px;
-    transition: all .3s ease;
-    flex-basis: calc(22% - 25px);
-}
-
-.food-card:hover {
-    cursor: pointer;
-    transform: scale(1.01);
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.food-card > img {
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-}
-
-.food-card > container > span > p:first-of-type {
-    width: 300px;
-}
-
-.food-card > container > span > p:last-of-type > span {
-    color: rgb(9, 175, 9);
-    font-size: 18px;
-}
-
-
-.food-card > container > form > input[type='submit'] {
-    width: 120px;
-    height: 25px;
-    background-color: #fff;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-}
+ 
