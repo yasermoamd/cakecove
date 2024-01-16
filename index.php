@@ -1,6 +1,6 @@
 <?php
 session_start(); 
-require_once('./service/connect.php');
+require_once('./services/connect.php');
 require_once('./utilities/addToCart.php');
 
 // if (!isset($_SESSION["user"])) {
@@ -64,31 +64,30 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['action']) && $_POST['
     </section>
 
     <section class="menu">
-        <h1 id="menu-text">The most popular products</h1>
-        <div class="food-row" id="food-section">
-            <?php
-                $sql = "SELECT * FROM cake";
-                $result = $conn->query($sql);
+            <h1 id="menu-text">The most popular products</h1>
+            <div class="food-row" id="food-section">
+                <?php
+                    $sql = "SELECT * FROM cake";
+                    $result = $conn->query($sql);
 
-                if ($result !== false && $result->num_rows > 0) {
-                    echo '<div class="food-row">';
-                
-                    $count = 0; 
-                
-                    while ($row = $result->fetch_assoc()) {
-                        if ($count % 4 == 0 && $count != 0) {
-                            echo '</div><div class="food-row">';
-                        }
-                        echo '
-                            <div class="food-card">
-                                <img src="'. $row['product_image'] .'" width="360" height="360" id="img">
-                                <h2>' . $row['product_name'] . '</h2>
-                                <container>
-                                    <span>
-                                        <p id="product_desc">' . $row['product_description'] . '</p>
-                                        <p>Price: <span>£ ' . $row['product_price'] . '</span></p>
-                                    </span>
-                                     <div class="buttons">
+                    if ($result !== false && $result->num_rows > 0) {
+                        echo '<div class="food-row">';
+                    
+                        $count = 0; 
+                    
+                        while ($row = $result->fetch_assoc()) { 
+                            
+                            echo '
+                                <div class="food-card">
+                                    <img src="'. $row['product_image'] .'" width="360" height="360" id="img">
+                                    <h2>' . $row['product_name'] . '</h2>
+                                    <container>
+                                        <span>
+                                            <p id="product_desc">' . $row['product_description'] . '</p>
+                                            <p>Price: <span>£ ' . $row['product_price'] . '</span></p>
+                                        </span>
+
+                                        <div class="buttons">
                                         <form method="post" action="./pages/product_details.php/id='. $row['product_id'] .'">
                                             <input type="hidden" name="product_id" value="' . (isset($row['product_id']) ? $row['product_id'] : '') . '">
                                             <input type="hidden" name="action" value="add">
@@ -103,15 +102,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['action']) && $_POST['
 
                                      </div>
 
-                                </container>
-                            </div>';
-                        $count++;
+                                    </container>
+                                </div>';
+                            $count++;
+                        }
+                        echo '</div>';
                     }
-                    echo '</div>';
-                }
-            ?>
-        </div>
-    </section>
+                ?>
+            </div>
+        </section>
 
     <?php
         require './components/Footer.php';

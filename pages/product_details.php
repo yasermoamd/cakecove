@@ -1,22 +1,21 @@
 <?php
 session_start(); 
 require_once('../utilities/addToCart.php');
-require_once('../service/connect.php');
- 
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/product_detail.css"> 
-    <title><?php 
-     $title = $_GET['title'];
-    echo "Cake Cove | $title"; ?></title>
+    <link rel="stylesheet" href="../assets/css/product_details.css"> 
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css"> 
+    <title> Cake Cove </title>
 </head>
 <body>
         <?php
             include('../components/Header.php');
+            require_once('../utilities/addToCart.php');
 
                 echo '<h1>Product Details</h1>';
                 

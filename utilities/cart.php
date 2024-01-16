@@ -6,8 +6,7 @@
 
 <?php
 
-require_once '../service/connect.php';
-require_once '../utilities/deliveryFunc.php';
+require_once '../services/connect.php';
 
 session_start();
 

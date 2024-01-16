@@ -1,33 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/product.css">
+    <title>Product</title>
+</head>
+<body>
 <?php
     require_once("../components/Header.php");
+    require_once("../functions/product_functions.php");
+    require_once("../components/slideshow.php");
+    require_once("../services/connect.php");
+?>
 
-    require_once('../components/slideshow.php');
+<section>
+    <div class="product_category">
+        <div>Cake</div>
+        <div>View All</div>
+    </div>
+    <?php product_by_category(1);  ?>
+   </section>
+   <section>
+    <div class="product_category">
+        <div>CupeCake</div>
+        <div>View All</div>
+    </div>
+    <?php product_by_category(2);  ?>
+   </section>
+   <section>
+    <div class="product_category">
+        <div>Wedding</div>
+        <div>View All</div>
+    </div>
+    <?php product_by_category(3);  ?>
+   </section>
 
-    echo "Product Page!";
+   <section>
+    <div class="product_category">
+        <div>Treats</div>
+        <div>View All</div>
+    </div>
+    <?php product_by_category(4);  ?>
+   </section>
 
-
-
-    function product_by_category($category_name) {
-        $sql = "SELECT *  FROM cake WHERE categories.name = $category_name";
-        echo '
-            <div class="food-card">
-                    <img src="'. $row['product_image'] .'" width="360" height="360" id="img">
-                    <h2>' . $row['product_name'] . '</h2>
-                    <container>
-                        <span>
-                            <p id="product_desc">' . $row['product_description'] . '</p>
-                            <p>Price: <span>£ ' . $row['product_price'] . '</span></p>
-                        </span>
-                            
-                            <form method="post" action="' . $_SERVER["PHP_SELF"] . '" onsubmit="showPopup();">
-                                <input type="hidden" name="product_id" value="' . (isset($row['product_id']) ? $row['product_id'] : '') . '">
-                                <input type="hidden" name="action" value="add">
-                                <input type="submit" value="Add to Cart">
-                            </form>
-
-                    </container>
-            </div>';
-    }
-
+   <section>
+    <div class="product_category">
+        <div>Accessories</div>
+        <div>View All</div>
+    </div>
+    <?php product_by_category(5);  ?>
+   </section>
+<?php
     require_once("../components/Footer.php");
 ?>
+</body>
+</html>

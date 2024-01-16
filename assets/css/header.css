@@ -8,6 +8,10 @@ body {
     padding: 0;
 }
 
+nav {
+    height: 65px;
+}
+
 .navbar > #header-text {
     font-family: 'Agbalumo', sans-serif;
     font-size: 32px;

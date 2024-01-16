@@ -3,13 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
-    <link rel="stylesheet" href="../assets/css/about.css" />
+    <link rel="stylesheet" href="../assets/css/about_us.css" />
     <title>About - Cake Cove</title>
   </head>
   <body>
     <!-- navbar for the webpage -->
     <?php include("../components/Header.php"); ?>
     <!-- Navbar End Here -->
+
+    <section class="about_content">
+         <div class="about_img">
+            <img src="../assets/img/cake_store.jpg" alt="">
+          </div>
+          <div class="about_content_desc"> 
+             <h4>Something About Us</h4>
+             <p id="about-text">
+                Welcome to Cake Cove, where indulgence meets convenience in every savory bite! At CakeCove, we take pride in crafting a fast-food experience that transcends the ordinary. Established with a passion for flavor and a commitment to quality, our fast-food haven has become a go-to destination for those seeking a quick and delicious escape from the mundane.
+             </p> 
+            </div>
+    </section>   
 
     <!--  Start Main content -->
     <main>
