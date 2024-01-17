@@ -1,3 +1,13 @@
+.about_video {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+video {
+  width: 700px;
+}
+
 section.about_content {
   display: flex;
   justify-content: center;

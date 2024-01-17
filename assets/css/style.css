@@ -109,7 +109,7 @@ body {
   border-radius: 4px;
   padding: 5px 10px;
   transition: all 0.3s ease;
-  flex-basis: calc(20% - 20px);
+  flex-basis: calc(25% - 20px);
 }
 
 .food-card:hover {

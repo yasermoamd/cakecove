@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['action']) && $_POST['
         <div class="popup-message-content">
             <span class="close" onclick="closePopup()">&times;</span>
             <p>
-                <img src="./templates/img/done.png" height="30" width="30">
+                <img src="./assets/img/done.png" height="30" width="30">
                 <span>Product was successfully added to your cart!</span>
             </p>
         </div>

@@ -11,6 +11,15 @@
     <?php include("../components/Header.php"); ?>
     <!-- Navbar End Here -->
 
+
+    <div class="about_video">
+        <video width="800" height="400" controls>
+          <source src="../assets/videos/production_id.mp4" type="video/mp4">
+          <source src="../assets/videos/production_id.ogg" type="video/ogg">
+          Your browser does not support HTML video.
+        </video>
+    </div>
+
     <section class="about_content">
          <div class="about_img">
             <img src="../assets/img/cake_store.jpg" alt="">

@@ -16,22 +16,22 @@
 
 <section>
     <div class="product_category">
-        <div>Cake</div>
-        <div>View All</div>
+        <div class="category_name">Cake</div>
+        <div class="view_all_category">View All</div>
     </div>
     <?php product_by_category(1);  ?>
    </section>
    <section>
     <div class="product_category">
-        <div>CupeCake</div>
-        <div>View All</div>
+        <div class="category_name">CupeCake</div>
+        <div class="view_all_category">View All</div>
     </div>
     <?php product_by_category(2);  ?>
    </section>
    <section>
     <div class="product_category">
         <div>Wedding</div>
-        <div>View All</div>
+        <div class="view_all_category">View All</div>
     </div>
     <?php product_by_category(3);  ?>
    </section>
@@ -39,7 +39,7 @@
    <section>
     <div class="product_category">
         <div>Treats</div>
-        <div>View All</div>
+        <div class="view_all_category">View All</div>
     </div>
     <?php product_by_category(4);  ?>
    </section>
@@ -47,7 +47,7 @@
    <section>
     <div class="product_category">
         <div>Accessories</div>
-        <div>View All</div>
+        <div class="view_all_category">View All</div>
     </div>
     <?php product_by_category(5);  ?>
    </section>
