@@ -1,71 +1,27 @@
-## Creating Database: 
-* Creating a `food` database:
-     ```
-       CREATE DATABASE food;
-     ```
+# cakecove
+  - Welcome to CakeCove, your go-to destination for all things delicious and delightful. This repository houses the codebase for the CakeCove online bakery website, where you can explore a tempting array of baked goods, place orders, and treat yourself to mouthwatering confections.
 
-    ## Working with tables:
-    - Creating a `cake` table:
-        ```
-            CREATE TABLE cake (
-                product_id int AUTO_INCREMENT primary key NOT NULL,
-                product_name varchar(255),
-                product_price decimal(4,2),
-                product_description text,
-                product_image text
-            );
-        ``` 
+## Features
+   * Product Showcase: Dive into our virtual bakery and discover a curated selection of cakes, cupcakes, cookies, and more. Each item is beautifully presented with detailed descriptions and high-quality images to help you make the perfect choice.
 
-    - Creating a `users` table:
-        ```
-            CREATE TABLE users (
-                id int AUTO_INCREMENT primary key NOT NULL,
-                email varchar(255),
-                password varchar(255),
-                username varchar(128)
-            );
-        ``` 
+   * Easy Ordering: Our user-friendly interface makes the ordering process a piece of cake. Simply add your desired items to the cart, specify customization options, and proceed to a seamless checkout experience.
 
-     -  Creating a `cart` table:
-        ```
-            CREATE TABLE cart (
-                id INT PRIMARY KEY AUTO_INCREMENT,
-                product_id INT NOT NULL,
-                quantity INT NOT NULL,
-                session_id VARCHAR(255) NOT NULL,  
-                KEY (product_id) 
-            );
-        ```
+   * User Accounts: Create an account on CakeCove to track your order history, save your favorite items, and expedite future purchases. Enjoy a personalized experience tailored to your taste buds.
 
-    -  Create a `order` table:
-        ```
-            CREATE TABLE orders (
-                order_id INT AUTO_INCREMENT PRIMARY KEY,
-                name VARCHAR(255) NOT NULL,
-                address TEXT NOT NULL,
-                email VARCHAR(255) NOT NULL,
-                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-            );
-        ```
+   * Promotions and Discounts: Stay in the loop with our latest promotions and discounts. We believe everyone deserves a treat, and our special offers make indulging in your favorite desserts even sweeter.
 
+   * Responsive Design: CakeCove is designed to provide a smooth and enjoyable shopping experience across various devices. Whether you're on your computer, tablet, or smartphone, ordering from our bakery is always convenient.
 
- ## Inserting data into `cake` table: 
+### Getting Started
+   - Visit the live CakeCove website at https://www.cakecove.com to start exploring our delectable offerings. Create an account to unlock additional features and make the most of your online bakery experience.
 
-    INSERT INTO cake (product_id, product_name, product_price, product_description, product_image) VALUES (0, 'Ramen', 24, 'Beloved Japanese dish that has gained international popularity for its comforting and flavorful appeal.', 'https://www.forkknifeswoon.com/wp-content/uploads/2014/10/simple-homemade-chicken-ramen-fork-knife-swoon-01.jpg');
+### Contributing
+   - While this repository primarily hosts the codebase for CakeCove's website, we welcome contributions and feedback. If you encounter issues or have suggestions for improvement, please open an issue. If you're interested in contributing code, fork the repository and submit a pull request.
 
-    INSERT INTO cake (product_name, product_price, product_description, product_image) VALUES ('Paella', 14, 'Iconic Spanish dish with saffron-infused rice, seafood, and vibrant flavors in one delectable medley.', 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/paella-837f12c.jpg?quality=90&resize=440,400');
+### License
+   - This project is licensed under the MIT License - see the LICENSE file for details.
 
-    INSERT INTO cake (product_name, product_price, product_description, product_image) VALUES ('Pierogi', 19, 'Polish dumplings, filled with potatoes, cheese, or meat, boiled or fried for perfection.', 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Pierogi_z_mas%C5%82em_-_2023.03.31.jpg/640px-Pierogi_z_mas%C5%82em_-_2023.03.31.jpg');
+#### Acknowledgments
+   * A heartfelt thank you to our customers who make CakeCove a part of their celebrations. Your love for our baked goods fuels our passion for creating memorable treats.
 
-    INSERT INTO cake (product_name, product_price, product_description, product_image) VALUES ('Moussaka', 21, 'Layers of eggplant, minced meat, and béchamel; a rich, savory Greek casserole delight.', 'https://www.recipetineats.com/wp-content/uploads/2019/03/Greek-Moussaka_3-re-edited-SQ.jpg');
-
-    INSERT INTO cake (product_name, product_price, product_description, product_image) VALUES('Eisbein', 26, 'German delicacy featuring slow-cooked, crispy pork knuckle, known for its savory, tender indulgence.', 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Eisbein-2.jpg/1200px-Eisbein-2.jpg');
-
-    INSERT INTO cake (product_name, product_price, product_description, product_image) VALUES ('Moussaka', 21, 'Layers of eggplant, minced meat, and béchamel; a rich, savory Greek casserole delight.', 'https://www.recipetineats.com/wp-content/uploads/2019/03/Greek-Moussaka_3-re-edited-SQ.jpg');
-
-    INSERT INTO cake (product_name, product_price, product_description, product_image) VALUES ('FILLET TOWER BURGER', 20, 'Savor perfection with our Fillet Tower Burger—succulent fillet, stacked high for an unrivaled taste experience.', 'https://3.bp.blogspot.com/_mPs1GewkiJg/Slz-ZKxURuI/AAAAAAAAAD8/yvJxg_8N_1Y/s320/product-fillet-tower.jpg');
-
-    INSERT INTO cake (product_name, product_price, product_description, product_image) VALUES ('Margherita Pizza', 17, 'Thin crust, ripe tomatoes, fresh mozzarella, basil. A timeless, flavorful pizza delight.', 'https://st3.idealista.it/cms/archivie/styles/idcms_large_desktop/public/2019-05/media/image/margherita_wikipedia.jpg?fv=bOcWknfe&itok=9WM7SPJF');
-   
-
-Created By [Vladoss](https://github.com/VladZtn)
+Indulge in the sweetness of life with CakeCove! 🎂🍰✨1
