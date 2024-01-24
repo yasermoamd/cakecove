@@ -20,12 +20,12 @@
                         <h2>' . $row['product_name'] . '</h2>
                         <container>
                             <span>
-                                <p id="product_desc">' . $row['product_description'] . '</p>
+                                <!-- <p id="product_desc">' . $row['product_description'] . '</p> -->
                                 <p>Price: <span>£ ' . $row['product_price'] . '</span></p>
                             </span>
 
                             <div class="buttons">
-                            <form method="post" action="./pages/product_details.php/id='. $row['product_id'] .'">
+                            <form method="post" action="#">
                                 <input type="hidden" name="product_id" value="' . (isset($row['product_id']) ? $row['product_id'] : '') . '">
                                 <input type="hidden" name="action" value="add">
                                 <input type="submit" value="View">

@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['action']) && $_POST['
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/notification.css">
     <title>Cake Cove</title>
 </head>
@@ -79,16 +79,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['action']) && $_POST['
                             
                             echo '
                                 <div class="food-card">
-                                    <img src="'. $row['product_image'] .'" width="360" height="360" id="img">
-                                    <h2>' . $row['product_name'] . '</h2>
-                                    <container>
+                                    <img src="'. $row['product_image'] .'" width="400" height="360" id="img">
+                                    <h2>' . $row['product_name'] . '</h2> 
                                         <span>
-                                            <p id="product_desc">' . $row['product_description'] . '</p>
+                                            <!-- <p id="product_desc">' . $row['product_description'] . '</p> -->
                                             <p>Price: <span>£ ' . $row['product_price'] . '</span></p>
                                         </span>
 
                                         <div class="buttons">
-                                        <form method="post" action="./pages/product_details.php/id='. $row['product_id'] .'">
+                                        <form method="post" action="#">
                                             <input type="hidden" name="product_id" value="' . (isset($row['product_id']) ? $row['product_id'] : '') . '">
                                             <input type="hidden" name="action" value="add">
                                             <input type="submit" value="View">
@@ -100,9 +99,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['action']) && $_POST['
                                             <input type="submit" value="Add to Cart">
                                         </form>
 
-                                     </div>
-
-                                    </container>
+                                     </div> 
                                 </div>';
                             $count++;
                         }
